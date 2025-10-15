@@ -1,0 +1,28 @@
+---
+---
+
+
+.project-item,
+.post-list-item {
+  border: 1px solid #e0e0e0;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-item:hover,
+.post-list-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3,
+.post-list-item h3 {
+  margin-top: 0;
+}
+
+[data-theme="dark"] .project-item,
+[data-theme="dark"] .post-list-item {
+  border-color: #444;
+}

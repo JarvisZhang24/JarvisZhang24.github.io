@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 ---
 
 ## Hi, I'm Yichen Zhang

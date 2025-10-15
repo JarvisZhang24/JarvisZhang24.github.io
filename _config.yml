@@ -1,16 +1,27 @@
-title: Jarvis Zhang
+title: Yichen Zhang
 description: AI Research @ NYU - VLM, RL, Robotics
 url: https://jarvis-zhang.com
 baseurl: ""
 theme: minima
+lang: en
+timezone: America/New_York
 
 author:
-  name: Jarvis Zhang
+  name: Yichen Zhang
   email: jarviszhang.ai@gmail.com
 
+# Navigation header
+header_pages:
+  - about.md
+  - projects.md
+  - posts.md
+
+# Theme settings
 minima:
+  skin: dark
   social_links:
     - { platform: github, user_url: "https://github.com/JarvisZhang24" }
 
+# Plugins
 plugins:
   - jekyll-feed

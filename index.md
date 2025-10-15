@@ -4,7 +4,7 @@ title: Yichen Zhang
 description: AI Researcher @ NYU - Vision-Language Models, RL, Robotics
 ---
 
-<div style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; flex-wrap: wrap;">
+<div style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; flex-wrap: wap;">
   <img src="/assets/profile.png" alt="Yichen Zhang" width="160" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <div>
     <h2 style="margin: 0;">Hi, I'm Yichen Zhang</h2>
@@ -25,9 +25,15 @@ description: AI Researcher @ NYU - Vision-Language Models, RL, Robotics
 
 **🚀 FastVLM Research**  
 Fine-tuning large vision-language models on H100 GPUs for enhanced multimodal reasoning and real-world applications.
+</div>
+
+<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
 
 **🧬 VariantAI Platform**  
 Developing a genome-scale model integration platform that combines AI with biological data analysis for precision medicine.
+</div>
+
+<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
 
 **🤖 Vision-Language-Action Systems**  
 Exploring VLA architectures for robotic manipulation tasks, enabling robots to understand and act based on visual and linguistic inputs.
@@ -71,4 +77,4 @@ Exploring VLA architectures for robotic manipulation tasks, enabling robots to u
 Interested in collaboration or want to discuss AI research? Feel free to reach out!
 
 **Email**: [jarviszhang.ai@gmail.com](mailto:jarviszhang.ai@gmail.com)  
-**GitHub**: [@JarvisZhang24](https://github.com/JarvisZhang24) | **LinkedIn**: [Yichen Zhang](https://www.linkedin.com/in/yichen-zhang)
+**GitHub**: [@JarvisZhang24](https://github.com/JarvisZhang24) 

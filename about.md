@@ -55,9 +55,8 @@ I'm always interested in discussing research opportunities, collaborations, or j
 
 **Email**: [jarviszhang.ai@gmail.com](mailto:jarviszhang.ai@gmail.com)  
 **GitHub**: [@JarvisZhang24](https://github.com/JarvisZhang24)  
-**LinkedIn**: [Yichen Zhang](https://www.linkedin.com/in/yichen-zhang)  
 **Twitter**: [@JarvisZhang24](https://twitter.com/JarvisZhang24)
 
----
+-
 
 *Last updated: October 2025*

@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Yichen Zhang
 description: AI Researcher @ NYU - Vision-Language Models, RL, Robotics
 ---
 

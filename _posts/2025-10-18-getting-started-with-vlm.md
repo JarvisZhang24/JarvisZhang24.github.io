@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting Started with Vision-Language Models"
-date: 2025-10-18 14:00:00 -0400
+date: 2025-10-15 14:00:00 -0400
 ---
 
 Vision-Language Models (VLMs) are transforming how AI systems understand multimodal data. Here's a quick intro to get started.

@@ -1,0 +1,153 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom styling for Jarvis Zhang's site */
+
+/* Improved typography */
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid #e8e8e8;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #2a7ae2;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+/* Enhanced links */
+a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Code blocks styling */
+code {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+/* Post list styling */
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-list > li {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.post-list > li:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  font-size: 0.9em;
+  color: #828282;
+}
+
+.post-link {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+/* Project cards */
+.project-card {
+  background: #f9f9f9;
+  border-left: 4px solid #2a7ae2;
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+
+/* Badges and tags */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background-color: #2a7ae2;
+  border-radius: 3px;
+  margin-right: 0.5em;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer styling */
+.site-footer {
+  border-top: 2px solid #e8e8e8;
+  padding-top: 2em;
+  margin-top: 3em;
+}
+
+/* Dark theme adjustments */
+@media (prefers-color-scheme: dark) {
+  code {
+    background-color: #2d2d2d;
+  }
+  
+  pre {
+    background-color: #1e1e1e;
+    border-color: #404040;
+  }
+  
+  .project-card {
+    background: #2d2d2d;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  body {
+    font-size: 15px;
+  }
+}

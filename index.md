@@ -2,6 +2,7 @@
 layout: home
 ---
 
+## Hi, I'm Yichen Zhang
 AI Researcher @ NYU Computer Engineering
 
 ### Research Interests

@@ -2,8 +2,7 @@
 layout: home
 ---
 
-## Hi, I'm Yichen Zhang
-AI Researcher @ NYU Computer Engineering
+AI Researcher NYU Computer Engineering
 
 ### Research Interests
 Vision-Language Models, Reinforcement Learning, Robotics

@@ -23,4 +23,3 @@ Research Interests: Vision-Language Models, Reinforcement Learning, Robotics
 - [About Me](/about) — Background, education, research interests  
 - [Projects](/projects) — Research & applied AI works  
 - [Posts](/posts) — Technical blog posts
-- [Contact](/contact) — Email, GitHub, LinkedIn

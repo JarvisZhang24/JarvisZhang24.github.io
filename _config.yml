@@ -3,15 +3,34 @@ description: AI Researcher @ NYU - VLM, RL, Robotics
 url: "https://jarvis-zhang.com"
 baseurl: ""
 theme: minima
+lang: en
+timezone: America/New_York
 
+
+# Navigation menu
+header_pages:
+  - about.md
+  - projects.md
+  - posts.md
+
+# Collections for organizing projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Theme configuration
 minima:
   skin: classic
   social_links:
     - platform: github
       user_url: "https://github.com/JarvisZhang24"
-    # - platform: scholar
-    #   user_url: 
 
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Display settings
+show_excerpts: true

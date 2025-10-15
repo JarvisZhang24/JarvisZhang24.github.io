@@ -4,36 +4,60 @@ title: About
 permalink: /about/
 ---
 
-I'm **Yichen Zhang**, a Computer Engineering student at **New York University**, passionate about building intelligent systems that bridge vision, language, and action.
+<div style="text-align: center; margin: 2em 0;">
+  <img src="/assets/profile.png" alt="Yichen Zhang" width="200" style="border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
 
-## Research Interests
+I'm **Yichen Zhang**, a Computer Engineering graduate student at **New York University**, passionate about building intelligent systems that bridge vision, language, and action. My research focuses on making AI systems more capable of understanding and interacting with the world through multimodal learning.
 
-**Vision-Language Models (VLM/VLA)**  
-Exploring multimodal understanding and how AI can reason about both visual and linguistic information.
+## 🔬 Research Interests
 
-**Reinforcement Learning**  
-Developing efficient learning algorithms for autonomous decision-making.
+### Vision-Language Models (VLM/VLA)
+Exploring multimodal understanding and how AI systems can reason about both visual and linguistic information. Currently working on fine-tuning large vision-language models for real-world applications.
 
-**Robotics**  
-Building embodied AI systems that can interact with the physical world.
+### Reinforcement Learning
+Developing efficient learning algorithms for autonomous decision-making in complex environments. Interested in sample-efficient methods and policy optimization.
 
-## Education
+### Robotics & Embodied AI
+Building intelligent systems that can perceive, understand, and interact with the physical world through Vision-Language-Action frameworks.
 
-**New York University**  
+## 🎓 Education
+
+**New York University** — *2024 - Present*  
 M.S. in Computer Engineering  
-Focus: AI, Deep Learning, LLM
+Focus: Artificial Intelligence, Deep Learning, Large Language Models  
+Relevant Coursework: Computer Vision, Natural Language Processing, Reinforcement Learning
 
-**Beijing Jiaotong University**  
+**Beijing Jiaotong University** — *2021 - 2023*  
 B.S. in Communication Engineering  
+Focus: Signal Processing, Machine Learning Fundamentals
 
+## 💼 Current Work
 
-## Skills
+- **FastVLM Research**: Fine-tuning vision-language models on H100 GPUs for enhanced multimodal reasoning capabilities
+- **VariantAI Platform**: Developing a genome-scale model integration platform for biological data analysis
+- **VLA Systems**: Exploring Vision-Language-Action architectures for robotic manipulation tasks
 
-**Programming**: Python, TypeScript, Java  
-**ML Frameworks**: PyTorch,  Hugging Face  
-**Tools**: Git, Docker,
+## 🛠️ Technical Skills
 
-## Contact
+**Programming Languages**: Python, TypeScript, Java, C++  
+**ML/DL Frameworks**: PyTorch, TensorFlow, Hugging Face Transformers, JAX  
+**Tools & Technologies**: Git, Docker, CUDA, ROS, Linux  
+**Cloud & Compute**: AWS, GCP, SLURM, Multi-GPU Training
 
-**Email**: [Email](jarviszhang.ai@gmail.com)  
-**GitHub**: [JarvisZhang24](https://github.com/JarvisZhang24)
+## 📝 Publications & Projects
+
+Check out my [Projects](/projects) page for detailed information about my research and applied work.
+
+## 📫 Contact
+
+I'm always interested in discussing research opportunities, collaborations, or just chatting about AI and robotics!
+
+**Email**: [jarviszhang.ai@gmail.com](mailto:jarviszhang.ai@gmail.com)  
+**GitHub**: [@JarvisZhang24](https://github.com/JarvisZhang24)  
+**LinkedIn**: [Yichen Zhang](https://www.linkedin.com/in/yichen-zhang)  
+**Twitter**: [@JarvisZhang24](https://twitter.com/JarvisZhang24)
+
+---
+
+*Last updated: October 2025*

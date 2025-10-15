@@ -6,9 +6,7 @@ theme: minima
 lang: en
 timezone: America/New_York
 
-author:
-  name: Yichen Zhang
-  email: jarviszhang.ai@gmail.com
+author: "Yichen Zhang"
 
 # Navigation header
 header_pages:

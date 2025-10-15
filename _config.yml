@@ -1,0 +1,12 @@
+title: Jarvis Zhang
+description: AI / VLM / RL — personal site
+url: https://jarvis-zhang.com
+baseurl: ""
+theme: minima
+lang: zh-CN
+timezone: America/New_York
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+minima:
+  skin: dark

@@ -1,51 +1,16 @@
 title: Jarvis Zhang
-description: >-
-  AI Researcher focusing on Vision-Language Models, Reinforcement Learning, 
-  and Robotics. NYU Computer Engineering.
+description: AI Research @ NYU - VLM, RL, Robotics
 url: https://jarvis-zhang.com
 baseurl: ""
 theme: minima
-lang: en
-timezone: America/New_York
 
-# Author information
 author:
   name: Jarvis Zhang
   email: jarviszhang.ai@gmail.com
 
-# Theme settings
 minima:
-  skin: dark
   social_links:
     - { platform: github, user_url: "https://github.com/JarvisZhang24" }
-    - { platform: linkedin, user_url: "https://linkedin.com/in/jarviszhang" }
-    - { platform: x, user_url: "https://twitter.com/jarviszhang" }
-    # - { platform: google_scholar, user_url: "https://scholar.google.com/..." }
 
-# SEO settings
-twitter:
-  username: jarviszhang
-  card: summary
-
-# Google Analytics (uncomment and add your ID when ready)
-# google_analytics: G-XXXXXXXXXX
-
-# Plugins
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-# Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# Exclude from processing
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor

@@ -20,16 +20,20 @@ Building embodied AI systems that can interact with the physical world.
 ## Education
 
 **New York University**  
-B.S. in Computer Engineering  
-Focus: AI, Machine Learning, Robotics
+M.S. in Computer Engineering  
+Focus: AI, Deep Learning, LLM
+
+**Beijing Jiaotong University**  
+B.S. in Communication Engineering  
+
 
 ## Skills
 
-**Programming**: Python, C++, Java  
-**ML Frameworks**: PyTorch, TensorFlow, Hugging Face  
-**Tools**: Git, Docker, ROS
+**Programming**: Python, TypeScript, Java  
+**ML Frameworks**: PyTorch,  Hugging Face  
+**Tools**: Git, Docker,
 
 ## Contact
 
-**Email**: jarviszhang.ai@gmail.com  
+**Email**: [Email](jarviszhang.ai@gmail.com)  
 **GitHub**: [JarvisZhang24](https://github.com/JarvisZhang24)

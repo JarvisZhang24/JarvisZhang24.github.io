@@ -16,5 +16,4 @@ Vision-Language Models, Reinforcement Learning, Robotics
 
 ---
 
-**Contact**: jarviszhang.ai@gmail.com  
-**GitHub**: [JarvisZhang24](https://github.com/JarvisZhang24)
+**Contact**: [Email](jarviszhang.ai@gmail.com)  | [GitHub](https://github.com/JarvisZhang24)

@@ -13,16 +13,6 @@ Fine-tuning VLMs for robot manipulation tasks. Exploring efficient adaptation me
 **Tech Stack**: PyTorch, Hugging Face Transformers, ROS  
 **Status**: In Progress
 
----
-
-### 🎮 Reinforcement Learning Experiments
-
-Implementing and comparing RL algorithms (PPO, SAC, DQN) on control tasks. Focus on sample efficiency and convergence.
-
-**Tech Stack**: Python, Stable-Baselines3, Gym  
-**Status**: Completed
-
----
 
 ### 📚 More Projects
 

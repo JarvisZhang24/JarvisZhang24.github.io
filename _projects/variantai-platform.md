@@ -1,8 +1,8 @@
 ---
 title: "VariantAI Platform"
-tech_stack: "Python, TensorFlow, PyTorch, Bioinformatics Tools, Cloud Computing"
+tech_stack: "Python, T3-stack, Next.js, Shadcn-ui, Bioinformatics Tools, Cloud Computing"
 status: "In Progress"
-order: 2
+order: 1
 ---
 
 A genome-scale model integration platform that combines artificial intelligence with biological data analysis for precision medicine applications.

@@ -9,7 +9,7 @@ description: AI Researcher @ NYU - Vision-Language Models, RL, Robotics
     <h2 style="margin: 0;">Hi, I'm Yichen Zhang</h2>
     <p style="font-size: 1.1em; color: #555; margin: 0.5em 0 0 0;">
       AI Researcher @ NYU Computer Engineering<br>
-      <em>Building intelligent systems through multimodal learning</em>
+      <em>Motto: Just Say Yes To Everything</em>
     </p>
   </div>
 </div>

@@ -53,9 +53,9 @@ Check out my [Projects](/projects) page for detailed information about my resear
 
 I'm always interested in discussing research opportunities, collaborations, or just chatting about AI and robotics!
 
-**Email**: [jarviszhang.ai@gmail.com](mailto:jarviszhang.ai@gmail.com)  
-**GitHub**: [@JarvisZhang24](https://github.com/JarvisZhang24)  
-**Twitter**: [@JarvisZhang24](https://twitter.com/JarvisZhang24)
+**Email**:  
+**GitHub**:  
+**Twitter**:  
 
 -
 

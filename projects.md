@@ -4,14 +4,14 @@ title: Projects
 permalink: /projects/
 ---
 
-Below is a selection of research and applied AI projects. For source code and additional work, see my [GitHub profile](https://github.com/JarvisZhang24).
+A selection of research and applied AI projects. For source code and additional work, see my [GitHub profile](https://github.com/JarvisZhang24).
 
 ---
 
 {% assign sorted_projects = site.projects | sort: 'order' %}
 {% for project in sorted_projects %}
 
-<div class="project-card">
+<div class="project-item">
   <h3>{{ project.title }}</h3>
   <span class="project-status">{{ project.status }}</span>
   <div class="project-desc">{{ project.content | markdownify }}</div>
@@ -23,7 +23,3 @@ Below is a selection of research and applied AI projects. For source code and ad
   {% endif %}
 </div>
 {% endfor %}
-
----
-
-Interested in collaboration? Feel free to [reach out](mailto:jarviszhang.ai@gmail.com).

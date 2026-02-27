@@ -12,7 +12,6 @@ description: Yichen Zhang — M.S. student in Computer Engineering at NYU. Resea
       Research: Vision-Language Models, Reinforcement Learning, Embodied AI
     </p>
     <div class="profile-links">
-      <a href="mailto:jarviszhang.ai@gmail.com">Email</a>
       <a href="https://github.com/JarvisZhang24">GitHub</a>
       <a href="https://scholar.google.com/">Google Scholar</a>
       <a href="/assets/cv.pdf">CV</a>
@@ -20,59 +19,30 @@ description: Yichen Zhang — M.S. student in Computer Engineering at NYU. Resea
   </div>
 </div>
 
-I am a graduate student in the Department of Electrical and Computer Engineering at **New York University**, where I focus on building intelligent systems that bridge vision, language, and action. My research interests span **vision-language models**, **reinforcement learning**, and **embodied AI** for robotics.
+<p class="bio-text">
+I am a graduate student in the Department of Electrical and Computer Engineering at <strong>New York University</strong>, where I focus on building intelligent systems that bridge vision, language, and action. My research interests span <strong>vision-language models</strong>, <strong>reinforcement learning</strong>, and <strong>embodied AI</strong> for robotics.
+</p>
 
-Previously, I obtained my B.S. in Communication Engineering from **Beijing Jiaotong University**.
-
----
-
-<h2 class="section-title">Research Interests</h2>
-
-<div class="research-grid">
-  <div class="research-card">
-    <h3>Vision-Language Models</h3>
-    <p>Multimodal understanding and reasoning across visual and linguistic modalities, with applications in VLM fine-tuning and evaluation.</p>
-  </div>
-  <div class="research-card">
-    <h3>Reinforcement Learning</h3>
-    <p>Sample-efficient algorithms, policy optimization, and reward shaping for autonomous decision-making in complex environments.</p>
-  </div>
-  <div class="research-card">
-    <h3>Embodied AI & Robotics</h3>
-    <p>Vision-Language-Action frameworks that enable robots to perceive, reason, and interact with the physical world.</p>
-  </div>
-</div>
+<p class="bio-text">
+Previously, I obtained my B.S. in Communication Engineering from <strong>Beijing Jiaotong University</strong>.
+</p>
 
 ---
 
-<h2 class="section-title">News</h2>
+<h2 class="section-heading">Research Interests</h2>
 
-<ul class="news-list">
-  <li><span class="news-date">Feb 2025</span> Started working on Vision-Language-Action architectures for robotic manipulation.</li>
-  <li><span class="news-date">Jan 2025</span> Began fine-tuning large vision-language models on H100 GPUs for multimodal reasoning.</li>
-  <li><span class="news-date">Sep 2024</span> Joined NYU as an M.S. student in Computer Engineering.</li>
+<ul class="research-list">
+  <li><strong>Vision-Language Models</strong> &mdash; Multimodal understanding and reasoning across visual and linguistic modalities, with applications in VLM fine-tuning and evaluation.</li>
+  <li><strong>Reinforcement Learning</strong> &mdash; Sample-efficient algorithms, policy optimization, and reward shaping for autonomous decision-making in complex environments.</li>
+  <li><strong>Embodied AI &amp; Robotics</strong> &mdash; Vision-Language-Action frameworks that enable robots to perceive, reason, and interact with the physical world.</li>
 </ul>
 
 ---
 
-<h2 class="section-title">Selected Projects</h2>
+<h2 class="section-heading">News</h2>
 
-<div class="project-card">
-  <h3>FastVLM — Vision-Language Model Fine-Tuning</h3>
-  <div class="project-desc">Fine-tuning large vision-language models on H100 GPUs for enhanced multimodal reasoning and real-world applications.</div>
-  <div class="tech-stack"><span>PyTorch</span> <span>Hugging Face</span> <span>CUDA</span> <span>Multi-GPU</span></div>
-</div>
-
-<div class="project-card">
-  <h3>VariantAI — Genome-Scale AI Platform</h3>
-  <div class="project-desc">A genome-scale model integration platform combining AI with biological data analysis for precision medicine applications.</div>
-  <div class="tech-stack"><span>Python</span> <span>Next.js</span> <span>Bioinformatics</span> <span>Cloud Computing</span></div>
-</div>
-
-<div class="project-card">
-  <h3>Vision-Language-Action Systems for Robotics</h3>
-  <div class="project-desc">Exploring VLA architectures for robotic manipulation, enabling robots to understand and act based on visual and linguistic inputs.</div>
-  <div class="tech-stack"><span>PyTorch</span> <span>ROS</span> <span>Transformers</span></div>
-</div>
-
-<p style="margin-top: 0.5rem;"><a href="/projects/">View all projects →</a></p>
+<table class="news-table">
+  <tr><td class="news-date">Feb 2025</td><td>Started working on Vision-Language-Action architectures for robotic manipulation.</td></tr>
+  <tr><td class="news-date">Jan 2025</td><td>Began fine-tuning large vision-language models on H100 GPUs for multimodal reasoning.</td></tr>
+  <tr><td class="news-date">Sep 2024</td><td>Joined NYU as an M.S. student in Computer Engineering.</td></tr>
+</table>

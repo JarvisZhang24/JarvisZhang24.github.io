@@ -4,7 +4,7 @@ title: Blog
 permalink: /posts/
 ---
 
-Technical writing on AI research, machine learning, and robotics.
+This page lists your research notes and technical posts. Add markdown files to `_posts/` to publish entries.
 
 ---
 
@@ -20,5 +20,7 @@ Technical writing on AI research, machine learning, and robotics.
 </div>
 {% endfor %}
 {% else %}
-<p style="color: #aaa; padding: 1.5rem 0;">No posts yet. Check back soon.</p>
+<div class="empty-state">
+  No posts yet. Add your first post in `_posts/`.
+</div>
 {% endif %}

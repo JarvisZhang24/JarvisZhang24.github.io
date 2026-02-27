@@ -4,11 +4,12 @@ title: Projects
 permalink: /projects/
 ---
 
-A selection of research and applied AI projects. For source code and additional work, see my [GitHub profile](https://github.com/JarvisZhang24).
+A curated list of ongoing and completed research projects. Add project files under `_projects/` to populate this page.
 
 ---
 
 {% assign sorted_projects = site.projects | sort: 'order' %}
+{% if sorted_projects.size > 0 %}
 {% for project in sorted_projects %}
 
 <div class="project-item">
@@ -23,3 +24,8 @@ A selection of research and applied AI projects. For source code and additional 
   {% endif %}
 </div>
 {% endfor %}
+{% else %}
+<div class="empty-state">
+  No projects yet. Add your first project in `_projects/`.
+</div>
+{% endif %}

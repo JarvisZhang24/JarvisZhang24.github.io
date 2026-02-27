@@ -4,59 +4,74 @@ title: About
 permalink: /about/
 ---
 
-<div style="text-align: center; margin: 2em 0;">
-  <img src="/assets/profile.png" alt="Yichen Zhang" width="200" style="border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+I am a graduate student in the Department of Electrical and Computer Engineering at **New York University**, advised in research on vision-language models, reinforcement learning, and embodied AI. I am broadly interested in building intelligent systems that can perceive, reason, and act in the real world.
+
+Before joining NYU, I received my B.S. in Communication Engineering from **Beijing Jiaotong University**.
+
+---
+
+<h2 class="section-title">Education</h2>
+
+<div class="timeline-item">
+  <h3>New York University</h3>
+  <div class="timeline-meta">M.S. in Computer Engineering &middot; 2024 &ndash; Present</div>
+  <p>Focus: Artificial Intelligence, Deep Learning, Large Language Models<br>
+  Coursework: Computer Vision, Natural Language Processing, Reinforcement Learning</p>
 </div>
 
-I'm **Yichen Zhang**, a Computer Engineering graduate student at **New York University**, passionate about building intelligent systems that bridge vision, language, and action. My research focuses on making AI systems more capable of understanding and interacting with the world through multimodal learning.
+<div class="timeline-item">
+  <h3>Beijing Jiaotong University</h3>
+  <div class="timeline-meta">B.S. in Communication Engineering &middot; 2021 &ndash; 2023</div>
+  <p>Focus: Signal Processing, Machine Learning Fundamentals</p>
+</div>
 
-## 🔬 Research Interests
+---
 
-### Vision-Language Models (VLM/VLA)
-Exploring multimodal understanding and how AI systems can reason about both visual and linguistic information. Currently working on fine-tuning large vision-language models for real-world applications.
+<h2 class="section-title">Research Interests</h2>
 
-### Reinforcement Learning
-Developing efficient learning algorithms for autonomous decision-making in complex environments. Interested in sample-efficient methods and policy optimization.
+<div class="research-grid">
+  <div class="research-card">
+    <h3>Vision-Language Models</h3>
+    <p>Multimodal understanding and reasoning across visual and linguistic modalities, including VLM fine-tuning and evaluation.</p>
+  </div>
+  <div class="research-card">
+    <h3>Reinforcement Learning</h3>
+    <p>Sample-efficient algorithms, policy optimization, and reward shaping for autonomous decision-making.</p>
+  </div>
+  <div class="research-card">
+    <h3>Embodied AI & Robotics</h3>
+    <p>Vision-Language-Action frameworks enabling robots to perceive, reason, and interact with the physical world.</p>
+  </div>
+</div>
 
-### Robotics & Embodied AI
-Building intelligent systems that can perceive, understand, and interact with the physical world through Vision-Language-Action frameworks.
+---
 
-## 🎓 Education
+<h2 class="section-title">Technical Skills</h2>
 
-**New York University** — *2024 - Present*  
-M.S. in Computer Engineering  
-Focus: Artificial Intelligence, Deep Learning, Large Language Models  
-Relevant Coursework: Computer Vision, Natural Language Processing, Reinforcement Learning
+<div class="skills-grid">
+  <div class="skill-category">
+    <h3>Languages</h3>
+    <p>Python, TypeScript, Java, C++</p>
+  </div>
+  <div class="skill-category">
+    <h3>ML / DL Frameworks</h3>
+    <p>PyTorch, TensorFlow, Hugging Face Transformers, JAX</p>
+  </div>
+  <div class="skill-category">
+    <h3>Tools & Platforms</h3>
+    <p>Git, Docker, CUDA, ROS, Linux</p>
+  </div>
+  <div class="skill-category">
+    <h3>Cloud & Compute</h3>
+    <p>AWS, GCP, SLURM, Multi-GPU Training</p>
+  </div>
+</div>
 
-**Beijing Jiaotong University** — *2021 - 2023*  
-B.S. in Communication Engineering  
-Focus: Signal Processing, Machine Learning Fundamentals
+---
 
-## 💼 Current Work
+<h2 class="section-title">Contact</h2>
 
-- **FastVLM Research**: Fine-tuning vision-language models on H100 GPUs for enhanced multimodal reasoning capabilities
-- **VariantAI Platform**: Developing a genome-scale model integration platform for biological data analysis
-- **VLA Systems**: Exploring Vision-Language-Action architectures for robotic manipulation tasks
-
-## 🛠️ Technical Skills
-
-**Programming Languages**: Python, TypeScript, Java, C++  
-**ML/DL Frameworks**: PyTorch, TensorFlow, Hugging Face Transformers, JAX  
-**Tools & Technologies**: Git, Docker, CUDA, ROS, Linux  
-**Cloud & Compute**: AWS, GCP, SLURM, Multi-GPU Training
-
-## 📝 Publications & Projects
-
-Check out my [Projects](/projects) page for detailed information about my research and applied work.
-
-## 📫 Contact
-
-I'm always interested in discussing research opportunities, collaborations, or just chatting about AI and robotics!
-
-**Email**:  
-**GitHub**:  
-**Twitter**:  
-
--
-
-*Last updated: October 2025*
+<div class="contact-row">
+  <span><strong>Email:</strong> <a href="mailto:jarviszhang.ai@gmail.com">jarviszhang.ai@gmail.com</a></span>
+  <span><strong>GitHub:</strong> <a href="https://github.com/JarvisZhang24">@JarvisZhang24</a></span>
+</div>

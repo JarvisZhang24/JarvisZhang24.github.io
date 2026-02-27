@@ -1,11 +1,17 @@
-
-title: Jarvis
+title: Yichen Zhang
 url: "https://jarvis-zhang.com"
 baseurl: ""
 theme: minima
 lang: en
 timezone: America/New_York
 
+description: >-
+  Yichen Zhang — M.S. student in Computer Engineering at NYU.
+  Research in Vision-Language Models, Reinforcement Learning, and Embodied AI.
+
+author:
+  name: Yichen Zhang
+  email: jarviszhang.ai@gmail.com
 
 # Navigation menu
 header_pages:
@@ -26,11 +32,10 @@ minima:
     - platform: github
       user_url: "https://github.com/JarvisZhang24"
 
-
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
 # Display settings
-show_excerpts: true
+show_excerpts: false

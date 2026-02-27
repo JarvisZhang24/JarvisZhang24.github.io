@@ -1,79 +1,78 @@
 ---
 layout: home
-description: AI Researcher @ NYU - Vision-Language Models, RL, Robotics
+description: Yichen Zhang — M.S. student in Computer Engineering at NYU. Research in Vision-Language Models, Reinforcement Learning, and Embodied AI.
 ---
 
-<div style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; flex-wrap: wap;">
-  <img src="/assets/profile.png" alt="Yichen Zhang" width="160" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <div>
-    <h2 style="margin: 0;">Hi, I'm Yichen Zhang</h2>
-    <p style="font-size: 1.1em; color: #555; margin: 0.5em 0 0 0;">
-      AI Researcher @ NYU Computer Engineering<br>
-      <em>Motto: Just Say Yes To Everything</em>
+<div class="profile-section">
+  <img src="/assets/profile.png" alt="Yichen Zhang" class="profile-photo">
+  <div class="profile-info">
+    <h1>Yichen Zhang</h1>
+    <p class="affiliation">
+      M.S. in Computer Engineering, <a href="https://engineering.nyu.edu/">New York University</a><br>
+      Research: Vision-Language Models, Reinforcement Learning, Embodied AI
     </p>
+    <div class="profile-links">
+      <a href="mailto:jarviszhang.ai@gmail.com">Email</a>
+      <a href="https://github.com/JarvisZhang24">GitHub</a>
+      <a href="https://scholar.google.com/">Google Scholar</a>
+      <a href="/assets/cv.pdf">CV</a>
+    </div>
   </div>
 </div>
 
-**Research Focus**: Vision-Language Models, Reinforcement Learning, Robotics
+I am a graduate student in the Department of Electrical and Computer Engineering at **New York University**, where I focus on building intelligent systems that bridge vision, language, and action. My research interests span **vision-language models**, **reinforcement learning**, and **embodied AI** for robotics.
+
+Previously, I obtained my B.S. in Communication Engineering from **Beijing Jiaotong University**.
 
 ---
 
-## 🔬 Current Work
+<h2 class="section-title">Research Interests</h2>
 
-<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
-
-**🚀 FastVLM Research**  
-Fine-tuning large vision-language models on H100 GPUs for enhanced multimodal reasoning and real-world applications.
-</div>
-
-<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
-
-**🧬 VariantAI Platform**  
-Developing a genome-scale model integration platform that combines AI with biological data analysis for precision medicine.
-</div>
-
-<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px; margin: 1em 0;">
-
-**🤖 Vision-Language-Action Systems**  
-Exploring VLA architectures for robotic manipulation tasks, enabling robots to understand and act based on visual and linguistic inputs.
-
-</div>
-
----
-
-## 🎯 Research Interests
-
-- **Vision-Language Models (VLM/VLA)**: Multimodal understanding and reasoning
-- **Reinforcement Learning**: Sample-efficient algorithms and policy optimization  
-- **Embodied AI**: Bridging perception, language, and action in robotics
-
----
-
-## 🧩 Explore More
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; margin: 1.5em 0;">
-  <div style="padding: 1em; border: 2px solid #e0e0e0; border-radius: 8px; text-align: center;">
-    <h3 style="margin-top: 0;">📚 About Me</h3>
-    <p>Background, education, and research interests</p>
-    <a href="/about" style="text-decoration: none; color: #0066cc;">Learn More →</a>
+<div class="research-grid">
+  <div class="research-card">
+    <h3>Vision-Language Models</h3>
+    <p>Multimodal understanding and reasoning across visual and linguistic modalities, with applications in VLM fine-tuning and evaluation.</p>
   </div>
-  <div style="padding: 1em; border: 2px solid #e0e0e0; border-radius: 8px; text-align: center;">
-    <h3 style="margin-top: 0;">🔬 Projects</h3>
-    <p>Research works and applied AI projects</p>
-    <a href="/projects" style="text-decoration: none; color: #0066cc;">View Projects →</a>
+  <div class="research-card">
+    <h3>Reinforcement Learning</h3>
+    <p>Sample-efficient algorithms, policy optimization, and reward shaping for autonomous decision-making in complex environments.</p>
   </div>
-  <div style="padding: 1em; border: 2px solid #e0e0e0; border-radius: 8px; text-align: center;">
-    <h3 style="margin-top: 0;">✍️ Blog Posts</h3>
-    <p>Technical writing and tutorials</p>
-    <a href="/posts" style="text-decoration: none; color: #0066cc;">Read Posts →</a>
+  <div class="research-card">
+    <h3>Embodied AI & Robotics</h3>
+    <p>Vision-Language-Action frameworks that enable robots to perceive, reason, and interact with the physical world.</p>
   </div>
 </div>
 
 ---
 
-## 📫 Get In Touch
+<h2 class="section-title">News</h2>
 
-Interested in collaboration or want to discuss AI research? Feel free to reach out!
+<ul class="news-list">
+  <li><span class="news-date">Feb 2025</span> Started working on Vision-Language-Action architectures for robotic manipulation.</li>
+  <li><span class="news-date">Jan 2025</span> Began fine-tuning large vision-language models on H100 GPUs for multimodal reasoning.</li>
+  <li><span class="news-date">Sep 2024</span> Joined NYU as an M.S. student in Computer Engineering.</li>
+</ul>
 
-**Email**: [jarviszhang.ai@gmail.com](mailto:jarviszhang.ai@gmail.com)  
-**GitHub**: [@JarvisZhang24](https://github.com/JarvisZhang24) 
+---
+
+<h2 class="section-title">Selected Projects</h2>
+
+<div class="project-card">
+  <h3>FastVLM — Vision-Language Model Fine-Tuning</h3>
+  <div class="project-desc">Fine-tuning large vision-language models on H100 GPUs for enhanced multimodal reasoning and real-world applications.</div>
+  <div class="tech-stack"><span>PyTorch</span> <span>Hugging Face</span> <span>CUDA</span> <span>Multi-GPU</span></div>
+</div>
+
+<div class="project-card">
+  <h3>VariantAI — Genome-Scale AI Platform</h3>
+  <div class="project-desc">A genome-scale model integration platform combining AI with biological data analysis for precision medicine applications.</div>
+  <div class="tech-stack"><span>Python</span> <span>Next.js</span> <span>Bioinformatics</span> <span>Cloud Computing</span></div>
+</div>
+
+<div class="project-card">
+  <h3>Vision-Language-Action Systems for Robotics</h3>
+  <div class="project-desc">Exploring VLA architectures for robotic manipulation, enabling robots to understand and act based on visual and linguistic inputs.</div>
+  <div class="tech-stack"><span>PyTorch</span> <span>ROS</span> <span>Transformers</span></div>
+</div>
+
+<p style="margin-top: 0.5rem;"><a href="/projects/">View all projects →</a></p>

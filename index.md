@@ -6,14 +6,14 @@ description: Professional academic homepage template for PhD researchers.
 <div class="profile-section">
   <div class="profile-photo profile-photo-placeholder" aria-hidden="true"></div>
   <div class="profile-info">
-    <h1>Your Name</h1>
+    <h1>Yichen Zhang</h1>
     <p class="affiliation">
       PhD Candidate, Department Name, University Name<br>
-      Research Area 1 · Research Area 2 · Research Area 3
+      Large Language Model · Deep Learning · VLM
     </p>
     <div class="profile-links">
       <a href="#">Google Scholar</a>
-      <a href="#">GitHub</a>
+      <a href="https://github.com/JarvisZhang24">GitHub</a>
       <a href="#">CV</a>
     </div>
   </div>

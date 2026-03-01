@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-A curated list of ongoing and completed research projects. Add project files under `_projects/` to populate this page.
+Selected research projects in vision-language models, efficient reasoning, AI for science, and control systems.
 
 ---
 

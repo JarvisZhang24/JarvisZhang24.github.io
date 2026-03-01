@@ -1,4 +1,4 @@
-title: Your Name
+title: Yichen Zhang
 url: ""
 baseurl: ""
 theme: minima
@@ -6,11 +6,11 @@ lang: en
 timezone: America/New_York
 
 description: >-
-  Professional academic website template for PhD researchers.
+  Yichen Zhang — M.S. in Computer Engineering at NYU. Research in Vision-Language / Multimodal Learning, Embodied AI (VLA), and Robotics.
 
 author:
-  name: Your Name
-  email: your.email@university.edu
+  name: Yichen Zhang
+  email: yz10759@nyu.edu
 
 # Navigation menu
 header_pages:

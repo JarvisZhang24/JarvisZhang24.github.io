@@ -21,8 +21,7 @@ header_pages:
 # Collections for organizing projects
 collections:
   projects:
-    output: true
-    permalink: /projects/:name/
+    output: false
 
 # Theme configuration
 minima:

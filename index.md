@@ -17,7 +17,7 @@ image: /assets/profile.png
       I am interested in building systems that connect perception, language, and action in ways that are reliable, measurable, and useful in real-world settings.
     </p>
     <div class="button-row">
-      <a class="button button--primary" href="{{ '/projects/' | relative_url }}">View Projects</a>
+      <a class="button button--primary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
       <a class="button button--secondary" href="{{ '/publications/' | relative_url }}">Publications</a>
       <a class="button button--secondary" href="{{ '/about/' | relative_url }}">About</a>
       <a class="button button--secondary" href="mailto:yz10759@nyu.edu">Email</a>

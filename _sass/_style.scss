@@ -298,13 +298,17 @@ code {
 }
 
 .button--primary {
-  color: #ffffff;
+  min-width: 178px;
+  color: #ffffff !important;
+  border-color: var(--accent);
   background: var(--accent);
   box-shadow: none;
+  letter-spacing: 0.06em;
 
   &:hover {
-    color: #ffffff;
+    color: #ffffff !important;
     background: var(--accent-strong);
+    border-color: var(--accent-strong);
     transform: translateY(-1px);
   }
 }

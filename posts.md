@@ -2,11 +2,12 @@
 layout: page
 title: Blog
 permalink: /posts/
+description: Research notes and technical essays by Yichen Zhang.
 ---
 
-This page lists your research notes and technical posts. Add markdown files to `_posts/` to publish entries.
-
----
+<p class="page-intro">
+This section is reserved for research notes and technical essays. It will be published once there is a stable set of material worth archiving publicly.
+</p>
 
 {% if site.posts.size > 0 %}
 {% for post in site.posts %}

@@ -1,8 +1,9 @@
 title: Yichen Zhang
-url: ""
+url: "https://jarvis-zhang.com"
 baseurl: ""
 theme: minima
 lang: en
+locale: en_US
 timezone: America/New_York
 
 description: >-
@@ -12,16 +13,30 @@ author:
   name: Yichen Zhang
   email: yz10759@nyu.edu
 
+logo: /assets/profile.png
+github_username: JarvisZhang24
+
+social:
+  name: Yichen Zhang
+  links:
+    - https://github.com/JarvisZhang24
+
 # Navigation menu
 header_pages:
   - about.md
   - projects.md
-  - posts.md
+  - publications.md
 
 # Collections for organizing projects
 collections:
   projects:
     output: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/profile.png
 
 # Theme configuration
 minima:

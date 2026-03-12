@@ -2,11 +2,12 @@
 layout: page
 title: Projects
 permalink: /projects/
+description: Selected research and engineering projects by Yichen Zhang.
 ---
 
-Selected research projects in vision-language models, efficient reasoning, AI for science, and control systems.
-
----
+<p class="page-intro">
+Selected research and engineering work across multimodal learning, efficient reasoning, AI for science, and control systems. The emphasis is on projects with concrete technical artifacts, measurable outcomes, or reusable research infrastructure.
+</p>
 
 {% assign sorted_projects = site.projects | sort: 'order' %}
 {% if sorted_projects.size > 0 %}

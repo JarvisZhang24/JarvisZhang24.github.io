@@ -7,45 +7,43 @@ image: /assets/profile.png
 
 <section class="hero">
   <div class="hero-copy">
-    <p class="eyebrow">AI Research · New York University</p>
     <h1>Yichen Zhang</h1>
-    <p class="hero-thesis">Multimodal learning, embodied AI, and reliable reasoning systems.</p>
+    <p class="hero-kicker">M.S. in Computer Engineering, New York University</p>
     <p class="hero-summary">
-      I work on vision-language models, structured multimodal generation, efficient reasoning, and robotics.
+      I work on vision-language models, structured multimodal generation, efficient reasoning, and robotics, with an emphasis on reliable systems that connect perception, language, and action.
     </p>
     <p class="hero-subtext">
-      I am interested in building systems that connect perception, language, and action in ways that are reliable, measurable, and useful in real-world settings.
+      My recent work spans schema-constrained generation, recursive reasoning analysis, and foundation models for scientific and embodied settings.
     </p>
-    <div class="button-row">
-      <a class="button button--primary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
-      <a class="button button--secondary" href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a class="button button--secondary" href="{{ '/about/' | relative_url }}">About</a>
-      <a class="button button--secondary" href="mailto:yz10759@nyu.edu">Email</a>
-      <a class="button button--secondary" href="https://github.com/JarvisZhang24">GitHub</a>
+    <div class="hero-links">
+      <a href="mailto:yz10759@nyu.edu">Email</a>
+      <a href="https://github.com/JarvisZhang24">GitHub</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
     </div>
   </div>
   <aside class="hero-panel">
     <img class="profile-photo" src="{{ '/assets/profile.png' | relative_url }}" alt="Portrait of Yichen Zhang">
-    <p class="hero-role">M.S. in Computer Engineering<br>New York University</p>
-    <p class="hero-areas">
-      <span class="hero-areas-label">Research Areas</span>
-      Vision-Language Models · Embodied AI · Robotics · AI for Science
-    </p>
     <dl class="hero-facts">
       <div>
-        <dt>Background</dt>
-        <dd>B.S. in Communication Engineering and B.S. in Finance</dd>
+        <dt>Research Areas</dt>
+        <dd>Vision-Language Models, Embodied AI, Robotics, and AI for Science.</dd>
       </div>
       <div>
         <dt>Current Focus</dt>
         <dd>Structured generation, efficient reasoning, and grounded multimodal systems.</dd>
+      </div>
+      <div>
+        <dt>Background</dt>
+        <dd>B.S. in Communication Engineering and B.S. in Finance.</dd>
       </div>
     </dl>
   </aside>
 </section>
 
 <section class="homepage-section">
-  <h2 class="section-heading">Research Focus</h2>
+  <h2 class="section-heading">Research Interests</h2>
   <div class="cards-grid cards-grid--two">
     <article class="focus-card">
       <h3>Vision-Language Models</h3>

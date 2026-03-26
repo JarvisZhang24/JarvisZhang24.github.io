@@ -7,11 +7,11 @@ image: /assets/profile.png
 
 <section class="hero">
   <div class="hero-copy">
-    <p class="eyebrow">Yichen Zhang</p>
-    <h1>Multimodal learning, embodied AI, and reliable reasoning systems.</h1>
-    <p class="hero-kicker">M.S. in Computer Engineering at New York University</p>
+    <p class="eyebrow">AI Research · New York University</p>
+    <h1>Yichen Zhang</h1>
+    <p class="hero-thesis">Multimodal learning, embodied AI, and reliable reasoning systems.</p>
     <p class="hero-summary">
-      My research focuses on vision-language models, structured multimodal generation, efficient reasoning, and robotics.
+      I work on vision-language models, structured multimodal generation, efficient reasoning, and robotics.
     </p>
     <p class="hero-subtext">
       I am interested in building systems that connect perception, language, and action in ways that are reliable, measurable, and useful in real-world settings.
@@ -26,7 +26,7 @@ image: /assets/profile.png
   </div>
   <aside class="hero-panel">
     <img class="profile-photo" src="{{ '/assets/profile.png' | relative_url }}" alt="Portrait of Yichen Zhang">
-    <p class="hero-role">New York University<br>M.S. in Computer Engineering</p>
+    <p class="hero-role">M.S. in Computer Engineering<br>New York University</p>
     <p class="hero-areas">
       <span class="hero-areas-label">Research Areas</span>
       Vision-Language Models · Embodied AI · Robotics · AI for Science

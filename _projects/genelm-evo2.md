@@ -2,7 +2,15 @@
 title: "GeneLM-Evo2: Zero-shot Genomic Variant Pathogenicity Analysis"
 status: Completed
 order: 3
+group: science-control
+summary: "Built a zero-shot genomic variant scoring workflow around Evo2 for long-context pathogenicity analysis."
+result: "Deployed scalable H100 inference, integrated ClinVar-based evaluation, and shipped both code and a public project site."
 tech_stack: Genomic Foundation Models, Zero-shot Inference, ML Systems, AI for Science, Evo2 7B, Modal, NVIDIA H100
+links:
+  - label: Code
+    url: https://github.com/JarvisZhang24/GeneLM-Evo2
+  - label: Website
+    url: https://jarvis-ai.work
 ---
 
 Developed a **zero-shot variant pathogenicity scoring framework** using the Evo2 7B DNA foundation model with likelihood-based scoring over long genomic contexts (8192 tokens).

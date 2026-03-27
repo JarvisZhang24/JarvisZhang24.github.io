@@ -2,6 +2,9 @@
 title: "Efficiency Analysis of Tiny Recursive Models for Reasoning Tasks"
 status: Completed
 order: 2
+group: reasoning
+summary: "Reproduced Tiny Recursive Models on Sudoku-Extreme and studied the compute-accuracy trade-offs of recursive reasoning."
+result: "Found an overthinking regime under ACT and identified a shallow H2-L2 design as the best fixed-budget configuration."
 tech_stack: Recursive Reasoning, Adaptive Computation Time (ACT), Efficiency Evaluation, Transformers
 ---
 

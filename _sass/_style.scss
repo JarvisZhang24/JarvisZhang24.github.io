@@ -166,7 +166,8 @@ code {
 .page-intro {
   max-width: 56ch;
   color: var(--text-main);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .hero-summary {
@@ -282,8 +283,8 @@ code {
 .project-item h3,
 .edu-item h3 {
   margin: 0 0 0.42rem;
-  font-size: 1rem;
-  line-height: 1.28;
+  font-size: 1.18rem;
+  line-height: 1.3;
 }
 
 .focus-card p,
@@ -321,9 +322,47 @@ code {
   animation: fade-up 0.55s ease both;
 }
 
+.project-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border-soft);
+  animation: fade-up 0.55s ease both;
+}
+
+.project-group {
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+.project-group:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.project-group-header {
+  margin-bottom: 0.35rem;
+}
+
+.project-group-title {
+  margin: 0 0 0.28rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.project-group-intro {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--text-soft);
+  font-size: 0.97rem;
+  line-height: 1.68;
+}
+
 .work-item:first-child,
 .publication-card:first-child,
 .timeline-item:first-child {
+  padding-top: 0.2rem;
+}
+
+.project-item:first-child {
   padding-top: 0.2rem;
 }
 
@@ -332,6 +371,10 @@ code {
 .timeline-item:last-child {
   padding-bottom: 0;
   border-bottom: none;
+}
+
+.project-item:last-child {
+  padding-bottom: 0;
 }
 
 .work-header {
@@ -346,6 +389,15 @@ code {
   margin: 0;
   font-size: 1rem;
   line-height: 1.34;
+}
+
+.project-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.85rem 1rem;
+  margin-bottom: 0.32rem;
 }
 
 .work-year,
@@ -386,6 +438,26 @@ code {
 .contact-info a {
   font-size: 0.92rem;
   font-weight: 600;
+}
+
+.project-lead {
+  margin: 0 0 0.35rem;
+  max-width: 62ch;
+  color: var(--text-strong);
+  font-size: 1.03rem;
+  line-height: 1.66;
+}
+
+.project-result {
+  margin: 0;
+  max-width: 64ch;
+  color: var(--text-main);
+  font-size: 0.97rem;
+  line-height: 1.74;
+}
+
+.project-links {
+  margin-top: 0.55rem;
 }
 
 .button {
@@ -431,27 +503,20 @@ code {
 
 .edu-item + .edu-item,
 .project-item + .project-item {
-  margin-top: 1.35rem;
-  padding-top: 1.35rem;
-  border-top: 1px solid var(--border-soft);
-}
-
-.project-item .project-desc {
-  margin-top: 0.65rem;
-}
-
-.project-item .project-desc > *:first-child {
   margin-top: 0;
-}
-
-.project-item .project-desc > *:last-child {
-  margin-bottom: 0;
+  padding-top: 1.1rem;
+  border-top: none;
 }
 
 .tech-stack {
   margin-top: 0.8rem;
   color: var(--text-soft);
   font-size: 0.84rem;
+}
+
+.project-tags {
+  max-width: 68ch;
+  font-size: 0.82rem;
 }
 
 .tech-stack span {
@@ -497,6 +562,13 @@ code {
   color: var(--text-soft);
   font-size: 0.92rem;
   border-top: 1px dashed var(--border-soft);
+}
+
+.publication-empty-state {
+  max-width: 58ch;
+  font-size: 1rem;
+  line-height: 1.72;
+  border-top-style: solid;
 }
 
 .site-footer {

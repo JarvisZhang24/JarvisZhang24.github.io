@@ -1,12 +1,14 @@
 <footer class="site-footer">
   <div class="wrapper">
     <div class="site-footer__inner">
-      <p>Yichen Zhang · Multimodal learning, embodied AI, robotics, and reliable reasoning systems.</p>
+      <div class="site-footer__identity">
+        <p class="site-footer__name">Yichen Zhang</p>
+        <p class="site-footer__meta">M.S. in Computer Engineering, New York University</p>
+      </div>
       <div class="footer-links">
+        <span class="footer-copyright">&copy; {{ site.time | date: '%Y' }}</span>
         <a href="mailto:yz10759@nyu.edu">Email</a>
         <a href="https://github.com/JarvisZhang24">GitHub</a>
-        <a href="{{ '/projects/' | relative_url }}">Projects</a>
-        <a href="{{ '/publications/' | relative_url }}">Publications</a>
       </div>
     </div>
   </div>

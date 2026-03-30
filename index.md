@@ -1,81 +1,111 @@
 ---
 layout: home
 title: Yichen Zhang
-description: Yichen Zhang — M.S. in Computer Engineering at NYU. Research in Vision-Language / Multimodal Learning, Embodied AI, and Robotics.
+description: Yichen Zhang — M.S. in Computer Engineering at NYU. Interests in Generative AI for Drug Discovery, VLMs, Embodied AI, and Robotics.
 image: /assets/profile.png
 ---
 
 <section class="hero">
-  <div class="hero-copy">
-    <h1>Yichen Zhang</h1>
-    <p class="hero-kicker">M.S. in Computer Engineering, New York University</p>
-    <p class="hero-summary">
-      I work on vision-language models, structured multimodal generation, efficient reasoning, and robotics, with an emphasis on reliable systems that connect perception, language, and action.
-    </p>
-    <p class="hero-subtext">
-      My recent work spans schema-constrained generation, recursive reasoning analysis, and foundation models for scientific and embodied settings.
-    </p>
-    <div class="hero-links">
-      <a href="mailto:yz10759@nyu.edu">Email</a>
-      <a href="https://github.com/JarvisZhang24">GitHub</a>
-      <a href="{{ '/projects/' | relative_url }}">Projects</a>
-      <a href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
+  <div class="hero-shell">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Research Profile</p>
+      <h1>Yichen Zhang</h1>
+      <p class="hero-affiliation">M.S. in Computer Engineering, New York University</p>
+      <p class="hero-bio">
+        I am interested in Generative AI for drug discovery, vision-language models, embodied AI, and robotics.
+      </p>
+      <p class="hero-detail">
+        I build multimodal systems and study how foundation models can support scientific discovery and embodied agents.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-block">
+          <p class="hero-meta-label">Themes</p>
+          <p class="hero-meta-text">Gen AI for drug discovery, VLMs, embodied AI, and robotics.</p>
+        </div>
+        <div class="hero-meta-block">
+          <p class="hero-meta-label">Explore</p>
+          <div class="hero-links">
+            <a href="mailto:yz10759@nyu.edu">Email</a>
+            <span class="sep">/</span>
+            <a href="https://github.com/JarvisZhang24">GitHub</a>
+            <span class="sep">/</span>
+            <a href="{{ '/projects/' | relative_url }}">Projects</a>
+            <span class="sep">/</span>
+            <a href="{{ '/publications/' | relative_url }}">Publications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <img class="profile-photo" src="{{ '/assets/profile.png' | relative_url }}" alt="Yichen Zhang">
+      </div>
     </div>
   </div>
-  <aside class="hero-panel">
-    <img class="profile-photo" src="{{ '/assets/profile.png' | relative_url }}" alt="Portrait of Yichen Zhang">
-    <dl class="hero-facts">
-      <div>
-        <dt>Research Areas</dt>
-        <dd>Vision-Language Models, Embodied AI, Robotics, and AI for Science.</dd>
-      </div>
-      <div>
-        <dt>Current Focus</dt>
-        <dd>Structured generation, efficient reasoning, and grounded multimodal systems.</dd>
-      </div>
-      <div>
-        <dt>Background</dt>
-        <dd>B.S. in Communication Engineering and B.S. in Finance.</dd>
-      </div>
-    </dl>
-  </aside>
 </section>
 
-<section class="homepage-section">
-  <h2 class="section-heading">Research Interests</h2>
-  <div class="cards-grid cards-grid--two">
-    <article class="focus-card">
+<section class="homepage-section homepage-section--split">
+  <div class="section-label">
+    <p class="section-kicker">Recent</p>
+    <h2 class="section-heading">News</h2>
+  </div>
+  <ul class="news-list">
+    <li class="news-item">
+      <span class="news-date">2025</span>
+      <span>Released <a href="https://github.com/JarvisZhang24/llm-fine-tune-jarvis">weights and demo</a> for schema-constrained food extraction with fine-tuned SmolVLM2-500M.</span>
+    </li>
+    <li class="news-item">
+      <span class="news-date">2025</span>
+      <span>Completed efficiency study of <a href="{{ '/projects/' | relative_url }}">Tiny Recursive Models</a> on Sudoku-Extreme reasoning tasks.</span>
+    </li>
+    <li class="news-item">
+      <span class="news-date">2025</span>
+      <span>Released <a href="https://github.com/JarvisZhang24/GeneLM-Evo2">GeneLM-Evo2</a> for zero-shot genomic variant pathogenicity scoring with Evo2 7B.</span>
+    </li>
+  </ul>
+</section>
+
+<section class="homepage-section homepage-section--split">
+  <div class="section-label">
+    <p class="section-kicker">Focus</p>
+    <h2 class="section-heading">Research Interests</h2>
+  </div>
+  <div class="interest-list">
+    <article class="interest-item">
+      <h3>Generative AI for Drug Discovery</h3>
+      <p>Generative and foundation-model methods for molecules, biological sequences, and scientific discovery.</p>
+    </article>
+    <article class="interest-item">
       <h3>Vision-Language Models</h3>
-      <p>Fine-tuning multimodal models for schema-constrained generation, structured extraction, and robust multimodal understanding.</p>
+      <p>Multimodal models for perception, reasoning, and structured generation.</p>
     </article>
-    <article class="focus-card">
-      <h3>Efficient Reasoning</h3>
-      <p>Studying compute-accuracy trade-offs in recursive and adaptive reasoning systems under explicit budget constraints.</p>
+    <article class="interest-item">
+      <h3>Embodied AI</h3>
+      <p>Agents that connect language, vision, and action in interactive environments.</p>
     </article>
-    <article class="focus-card">
-      <h3>AI for Science</h3>
-      <p>Using foundation models for biological sequence analysis and zero-shot scientific prediction tasks.</p>
-    </article>
-    <article class="focus-card">
-      <h3>Embodied AI and Robotics</h3>
-      <p>Exploring grounded perception-and-action pipelines that connect language, vision, and decision making in physical settings.</p>
+    <article class="interest-item">
+      <h3>Robotics</h3>
+      <p>Learning-based systems for grounded decision-making and robotic behavior.</p>
     </article>
   </div>
 </section>
 
-<section class="homepage-section">
-  <h2 class="section-heading">Selected Work</h2>
+<section class="homepage-section homepage-section--split homepage-section--work">
+  <div class="section-label">
+    <p class="section-kicker">Selected</p>
+    <h2 class="section-heading">Work</h2>
+    <p class="section-note">Selected projects across multimodal systems, AI for science, and grounded intelligence.</p>
+  </div>
   <div class="work-list">
     <article class="work-item">
       <div class="work-header">
-        <h3>Vision-Language Model Fine-tuning for Schema-Constrained Food Extraction</h3>
+        <h3>VLM Fine-tuning for Schema-Constrained Food Extraction</h3>
         <span class="work-year">2025</span>
       </div>
       <p>Fine-tuned SmolVLM2-500M for reliable JSON extraction from food images and released reproducible weights for downstream integration.</p>
       <div class="inline-links">
         <a href="https://github.com/JarvisZhang24/llm-fine-tune-jarvis">Code</a>
-        <a href="{{ '/projects/' | relative_url }}">Project Notes</a>
+        <a href="{{ '/projects/' | relative_url }}">Details</a>
       </div>
     </article>
     <article class="work-item">
@@ -91,41 +121,24 @@ image: /assets/profile.png
     </article>
     <article class="work-item">
       <div class="work-header">
-        <h3>Efficiency Analysis of Tiny Recursive Models for Reasoning Tasks</h3>
+        <h3>Efficiency Analysis of Tiny Recursive Models for Reasoning</h3>
         <span class="work-year">2025</span>
       </div>
       <p>Reproduced Tiny Recursive Models and measured how accuracy, throughput, and compute budgets interact on Sudoku-Extreme reasoning tasks.</p>
       <div class="inline-links">
-        <a href="{{ '/projects/' | relative_url }}">Project Summary</a>
+        <a href="{{ '/projects/' | relative_url }}">Details</a>
       </div>
     </article>
   </div>
-  <p class="section-note">Peer-reviewed papers and public preprints will be added here as they are released.</p>
 </section>
 
-<section class="homepage-section">
-  <h2 class="section-heading">Recent Updates</h2>
-  <div class="timeline">
-    <article class="timeline-item">
-      <p class="timeline-date">2025</p>
-      <div>
-        <h3>Schema-constrained food extraction release</h3>
-        <p>Released <a href="https://github.com/JarvisZhang24/llm-fine-tune-jarvis">weights and demo assets</a> for a fine-tuned SmolVLM2-500M system focused on reliable JSON output.</p>
-      </div>
-    </article>
-    <article class="timeline-item">
-      <p class="timeline-date">2025</p>
-      <div>
-        <h3>Tiny Recursive Models efficiency study</h3>
-        <p>Characterized accuracy-throughput trade-offs under adaptive computation and compute-normalized scheduling.</p>
-      </div>
-    </article>
-    <article class="timeline-item">
-      <p class="timeline-date">2025</p>
-      <div>
-        <h3>GeneLM-Evo2 public release</h3>
-        <p>Released <a href="https://github.com/JarvisZhang24/GeneLM-Evo2">GeneLM-Evo2</a> for zero-shot genomic variant pathogenicity scoring with Evo2 7B.</p>
-      </div>
-    </article>
+<section class="homepage-section homepage-section--split">
+  <div class="section-label">
+    <p class="section-kicker">Scholarly</p>
+    <h2 class="section-heading">Publications</h2>
+    <p class="section-note">Peer-reviewed papers, workshop papers, and preprints will appear here as they are released.</p>
+  </div>
+  <div class="publication-empty-state publication-empty-state--home">
+    <p>No publications yet. Papers, workshop submissions, and preprints will be listed here as they become available.</p>
   </div>
 </section>

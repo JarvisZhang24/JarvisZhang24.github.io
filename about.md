@@ -57,7 +57,5 @@ I am a Master&rsquo;s student in Computer Engineering at New York University (GP
   <div class="contact-info">
     <a href="mailto:yz10759@nyu.edu">Email</a>
     <a href="https://github.com/JarvisZhang24">GitHub</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
-    <a href="{{ '/publications/' | relative_url }}">Publications</a>
   </div>
 </section>

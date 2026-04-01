@@ -197,7 +197,7 @@ code {
 .hero-shell {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr) 340px;
   gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
   padding: 0;
@@ -319,26 +319,21 @@ code {
 
 .hero-photo-frame {
   position: relative;
-  padding: 10px;
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.36);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
   box-shadow:
-    0 10px 24px rgba(15, 23, 42, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    0 20px 48px rgba(15, 23, 42, 0.12),
+    0 6px 16px rgba(15, 23, 42, 0.07);
 }
 
 .profile-photo {
   display: block;
   width: 100%;
-  max-width: 320px;
-  aspect-ratio: 1 / 1.14;
-  border-radius: 24px;
+  max-width: 340px;
+  aspect-ratio: 4 / 5;
+  border-radius: 0;
   object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow:
-    0 10px 22px rgba(15, 23, 42, 0.07),
-    0 4px 10px rgba(15, 23, 42, 0.05);
+  object-position: center 60%;
 }
 
 .hero-links {
@@ -1055,7 +1050,7 @@ code {
   }
 
   .hero-shell {
-    grid-template-columns: 1fr 220px;
+    grid-template-columns: 1fr 260px;
     gap: 1.5rem;
   }
 
@@ -1069,7 +1064,7 @@ code {
   }
 
   .profile-photo {
-    max-width: 220px;
+    max-width: 260px;
   }
 
   .hero-meta {
@@ -1126,7 +1121,6 @@ code {
 
   .profile-photo {
     max-width: 160px;
-    border-radius: 20px;
   }
 
   .hero-content h1 {

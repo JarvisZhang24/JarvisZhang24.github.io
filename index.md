@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Yichen Zhang
-description: Yichen Zhang — Incoming research student at Osaka University. Research focus on Generative AI for Drug Discovery, VLMs, and Embodied AI.
+description: Yichen Zhang — Incoming Research Student at Osaka University. Research in Generative AI for Drug Discovery, with broader interests in Multimodal Learning and Embodied AI.
 image: /assets/photo_YichenZhang.JPG
 ---
 
@@ -29,7 +29,7 @@ image: /assets/photo_YichenZhang.JPG
             <span class="sep">/</span>
             <a href="https://github.com/JarvisZhang24">GitHub</a>
             <span class="sep">/</span>
-            <a href="https://www.linkedin.com/in/yichen-zhang-jarvis/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/yichen-zhang-a0077b2b3">LinkedIn</a>
             <span class="sep">/</span>
             <a href="{{ '/projects/' | relative_url }}">Projects</a>
           </div>
@@ -51,16 +51,24 @@ image: /assets/photo_YichenZhang.JPG
   </div>
   <ul class="news-list">
     <li class="news-item">
-      <span class="news-date">2025</span>
-      <span>Released <a href="https://github.com/JarvisZhang24/llm-fine-tune-jarvis">weights and demo</a> for schema-constrained food extraction with fine-tuned SmolVLM2-500M.</span>
+      <span class="news-date">2026</span>
+      <span>Joining <strong>Osaka University</strong> as a Research Student in June 2026, preparing for Ph.D. studies in Generative AI for Drug Discovery.</span>
+    </li>
+    <li class="news-item">
+      <span class="news-date">2026</span>
+      <span>Graduated from <strong>NYU</strong> with an M.S. in Computer Engineering (Jan 2026).</span>
     </li>
     <li class="news-item">
       <span class="news-date">2025</span>
-      <span>Completed efficiency study of <a href="{{ '/projects/' | relative_url }}">Tiny Recursive Models</a> on Sudoku-Extreme reasoning tasks.</span>
+      <span>Open-sourced <a href="https://github.com/JarvisZhang24/llm-fine-tune-jarvis">weights and demo</a> for schema-constrained food extraction with fine-tuned SmolVLM2-500M.</span>
     </li>
     <li class="news-item">
       <span class="news-date">2025</span>
-      <span>Released <a href="https://github.com/JarvisZhang24/GeneLM-Evo2">GeneLM-Evo2</a> for zero-shot genomic variant pathogenicity scoring with Evo2 7B.</span>
+      <span>Published efficiency analysis of <a href="{{ '/projects/' | relative_url }}">Tiny Recursive Models</a> on Sudoku-Extreme reasoning tasks.</span>
+    </li>
+    <li class="news-item">
+      <span class="news-date">2025</span>
+      <span>Open-sourced <a href="https://github.com/JarvisZhang24/GeneLM-Evo2">GeneLM-Evo2</a>, a zero-shot genomic variant pathogenicity scoring pipeline built on Evo2 7B.</span>
     </li>
   </ul>
 </section>
@@ -73,19 +81,15 @@ image: /assets/photo_YichenZhang.JPG
   <div class="interest-list">
     <article class="interest-item">
       <h3>Generative AI for Drug Discovery</h3>
-      <p>Generative and foundation-model methods for molecules, biological sequences, and scientific discovery.</p>
+      <p>Generative and foundation-model methods for molecules, biological sequences, and scientific discovery. This is my primary research direction.</p>
     </article>
     <article class="interest-item">
       <h3>Vision-Language Models</h3>
       <p>Multimodal models for perception, reasoning, and structured generation.</p>
     </article>
     <article class="interest-item">
-      <h3>Embodied AI</h3>
-      <p>Agents that connect language, vision, and action in interactive environments.</p>
-    </article>
-    <article class="interest-item">
-      <h3>Robotics</h3>
-      <p>Learning-based systems for grounded decision-making and robotic behavior.</p>
+      <h3>Embodied AI &amp; Robotics</h3>
+      <p>Agents that connect language, vision, and action for grounded decision-making in interactive environments.</p>
     </article>
   </div>
 </section>
@@ -129,16 +133,5 @@ image: /assets/photo_YichenZhang.JPG
         <a href="{{ '/projects/' | relative_url }}">Details</a>
       </div>
     </article>
-  </div>
-</section>
-
-<section class="homepage-section homepage-section--split">
-  <div class="section-label">
-    <p class="section-kicker">Scholarly</p>
-    <h2 class="section-heading">Publications</h2>
-    <p class="section-note">Peer-reviewed papers, workshop papers, and preprints will appear here as they are released.</p>
-  </div>
-  <div class="publication-empty-state publication-empty-state--home">
-    <p>No publications yet. Papers, workshop submissions, and preprints will be listed here as they become available.</p>
   </div>
 </section>

@@ -7,7 +7,7 @@ locale: en_US
 timezone: America/New_York
 
 description: >-
-  Yichen Zhang — Incoming research student at Osaka University. Research focus on Generative AI for Drug Discovery, VLMs, and Embodied AI.
+  Yichen Zhang — Incoming Research Student at Osaka University. Research in Generative AI for Drug Discovery, with broader interests in Multimodal Learning and Embodied AI.
 
 author:
   name: Yichen Zhang
@@ -19,12 +19,12 @@ social:
   name: Yichen Zhang
   links:
     - https://github.com/JarvisZhang24
+    - https://www.linkedin.com/in/yichen-zhang-a0077b2b3
 
 # Navigation menu
 header_pages:
   - about.md
   - projects.md
-  - publications.md
 
 # Collections for organizing projects
 collections:

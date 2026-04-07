@@ -1,8 +1,8 @@
 ---
 layout: home
 title: Yichen Zhang
-description: Yichen Zhang — M.S. in Computer Engineering at NYU. Interests in Generative AI for Drug Discovery, VLMs, Embodied AI, and Robotics.
-image: /assets/profile.png
+description: Yichen Zhang — Incoming research student at Osaka University. Research focus on Generative AI for Drug Discovery, VLMs, and Embodied AI.
+image: /assets/photo_YichenZhang.JPG
 ---
 
 <section class="hero">
@@ -10,17 +10,17 @@ image: /assets/profile.png
     <div class="hero-content">
       <p class="hero-eyebrow">Research Profile</p>
       <h1>Yichen Zhang</h1>
-      <p class="hero-affiliation">M.S. in Computer Engineering, New York University</p>
+      <p class="hero-affiliation">Incoming Research Student, Osaka University</p>
       <p class="hero-bio">
-        I am interested in Generative AI for drug discovery, vision-language models, embodied AI, and robotics.
+        My primary research focus is Generative AI for drug discovery. I am also broadly interested in vision-language models and embodied AI.
       </p>
       <p class="hero-detail">
-        I build multimodal systems and study how foundation models can support scientific discovery and embodied agents.
+        I recently completed my M.S. in Computer Engineering at NYU and will join Osaka University in June 2026, working toward a Ph.D. on generative and foundation-model approaches to molecular and biological sequence design.
       </p>
       <div class="hero-meta">
         <div class="hero-meta-block">
-          <p class="hero-meta-label">Themes</p>
-          <p class="hero-meta-text">Gen AI for drug discovery, VLMs, embodied AI, and robotics.</p>
+          <p class="hero-meta-label">Primary Direction</p>
+          <p class="hero-meta-text">Generative AI for Drug Discovery</p>
         </div>
         <div class="hero-meta-block">
           <p class="hero-meta-label">Explore</p>
@@ -29,16 +29,16 @@ image: /assets/profile.png
             <span class="sep">/</span>
             <a href="https://github.com/JarvisZhang24">GitHub</a>
             <span class="sep">/</span>
-            <a href="{{ '/projects/' | relative_url }}">Projects</a>
+            <a href="https://www.linkedin.com/in/yichen-zhang-jarvis/">LinkedIn</a>
             <span class="sep">/</span>
-            <a href="{{ '/publications/' | relative_url }}">Publications</a>
+            <a href="{{ '/projects/' | relative_url }}">Projects</a>
           </div>
         </div>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-photo-frame">
-        <img class="profile-photo" src="{{ '/assets/profile.png' | relative_url }}" alt="Yichen Zhang">
+        <img class="profile-photo" src="{{ '/assets/photo_YichenZhang.JPG' | relative_url }}" alt="Yichen Zhang">
       </div>
     </div>
   </div>

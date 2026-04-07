@@ -7,7 +7,7 @@ locale: en_US
 timezone: America/New_York
 
 description: >-
-  Yichen Zhang — M.S. in Computer Engineering at NYU. Research in Vision-Language / Multimodal Learning, Embodied AI (VLA), and Robotics.
+  Yichen Zhang — Incoming research student at Osaka University. Research focus on Generative AI for Drug Discovery, VLMs, and Embodied AI.
 
 author:
   name: Yichen Zhang
@@ -35,7 +35,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/profile.png
+      image: /assets/photo_YichenZhang.JPG
 
 # Theme configuration
 minima:

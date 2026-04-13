@@ -54,7 +54,7 @@ I am an incoming Research Student at Osaka University (starting June 2026), wher
   <div class="edu-item">
     <h3>Beijing Jiaotong University</h3>
     <div class="edu-meta">B.S. in Communication Engineering (GPA: 3.42 / 4.0) &middot; Sep 2021 &ndash; Jun 2023</div>
-    <p>Beijing, China &mdash; Transferred to pursue engineering after discovering my interest in quantitative and computational methods.</p>
+    <p>Beijing, China</p>
   </div>
 
   <div class="edu-item">

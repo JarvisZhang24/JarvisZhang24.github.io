@@ -1,0 +1,17 @@
+---
+import PersonalSite from "../../components/PersonalSite.astro";
+import { siteContent } from "../../data/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const content = siteContent.zh;
+---
+
+<BaseLayout
+  lang={content.htmlLang}
+  title={content.meta.title}
+  description={content.meta.description}
+  canonicalPath="/zh/"
+  alternatePath={content.alternatePath}
+>
+  <PersonalSite content={content} />
+</BaseLayout>

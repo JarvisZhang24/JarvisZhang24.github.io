@@ -1,0 +1,38 @@
+---
+import type { PageContent } from "../data/site";
+
+interface Props {
+  content: PageContent;
+}
+
+const { content } = Astro.props;
+---
+
+<a class="skip-link" href="#main">{content.nav.skip}</a>
+
+<header class="site-header" aria-label="Primary navigation">
+  <a class="wordmark" href={content.locale === "en" ? "/" : "/zh/"} aria-label="Yichen Zhang home">
+    <span>YZ</span>
+    <span class="wordmark__full">Yichen Zhang</span>
+  </a>
+
+  <nav class="site-nav" aria-label="Site sections">
+    <a href="#about">{content.nav.about}</a>
+    <a href="#research">{content.nav.research}</a>
+    <a href="#work">{content.nav.work}</a>
+    <a href="#journey">{content.nav.journey}</a>
+  </nav>
+
+  <a
+    class="language-link"
+    href={content.alternatePath}
+    lang={content.locale === "en" ? "zh-CN" : "en"}
+    hreflang={content.locale === "en" ? "zh-CN" : "en"}
+    data-language-link
+    data-language={content.locale === "en" ? "zh" : "en"}
+  >
+    <span>{content.localeLabel}</span>
+    <span aria-hidden="true">/</span>
+    <strong>{content.alternateLabel}</strong>
+  </a>
+</header>

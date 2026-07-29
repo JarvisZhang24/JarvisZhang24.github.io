@@ -6,33 +6,58 @@ interface Props {
 }
 
 const { content } = Astro.props;
+const home = content.locale === "en" ? "/" : "/zh/";
 ---
 
 <a class="skip-link" href="#main">{content.nav.skip}</a>
 
-<header class="site-header" aria-label="Primary navigation">
-  <a class="wordmark" href={content.locale === "en" ? "/" : "/zh/"} aria-label="Yichen Zhang home">
-    <span>YZ</span>
-    <span class="wordmark__full">Yichen Zhang</span>
-  </a>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href={home} aria-label={content.profile.name}>
+      <span class="brand__mark" aria-hidden="true">{content.profile.monogram}</span>
+      <span class="brand__name">{content.profile.name}</span>
+    </a>
 
-  <nav class="site-nav" aria-label="Site sections">
-    <a href="#about">{content.nav.about}</a>
-    <a href="#research">{content.nav.research}</a>
-    <a href="#work">{content.nav.work}</a>
-    <a href="#journey">{content.nav.journey}</a>
-  </nav>
+    <nav class="masthead__nav" aria-label="Sections">
+      <a href="#about">{content.nav.about}</a>
+      <a href="#research">{content.nav.research}</a>
+      <a href="#projects">{content.nav.projects}</a>
+      <a href="#education">{content.nav.education}</a>
+      <a href="#contact">{content.nav.contact}</a>
+    </nav>
 
-  <a
-    class="language-link"
-    href={content.alternatePath}
-    lang={content.locale === "en" ? "zh-CN" : "en"}
-    hreflang={content.locale === "en" ? "zh-CN" : "en"}
-    data-language-link
-    data-language={content.locale === "en" ? "zh" : "en"}
-  >
-    <span>{content.localeLabel}</span>
-    <span aria-hidden="true">/</span>
-    <strong>{content.alternateLabel}</strong>
-  </a>
+    <div class="masthead__tools">
+      <button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-label={content.nav.theme}
+        title={content.nav.theme}
+      >
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+          <g class="theme-toggle__sun">
+            <circle cx="10" cy="10" r="3.6"></circle>
+            <path
+              d="M10 1.4v2.1M10 16.5v2.1M18.6 10h-2.1M3.5 10H1.4M16.08 3.92l-1.49 1.49M5.41 14.59l-1.49 1.49M16.08 16.08l-1.49-1.49M5.41 5.41L3.92 3.92"
+            ></path>
+          </g>
+          <path
+            class="theme-toggle__moon"
+            d="M16.2 12.4A6.9 6.9 0 017.6 3.8a6.9 6.9 0 108.6 8.6z"></path>
+        </svg>
+      </button>
+
+      <a
+        class="lang-switch"
+        href={content.alternatePath}
+        lang={content.locale === "en" ? "zh-CN" : "en"}
+        hreflang={content.locale === "en" ? "zh-CN" : "en"}
+        data-language-link
+        data-language={content.locale === "en" ? "zh" : "en"}
+      >
+        {content.alternateLabel}
+      </a>
+    </div>
+  </div>
+  <span class="masthead__progress" aria-hidden="true"></span>
 </header>

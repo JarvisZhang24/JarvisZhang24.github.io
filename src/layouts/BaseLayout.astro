@@ -1,11 +1,11 @@
 ---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/source-serif-4/400.css";
-import "@fontsource/source-serif-4/400-italic.css";
 import "@fontsource/source-serif-4/600.css";
-import "@fontsource/source-serif-4/700.css";
-import "@fontsource/noto-serif-sc/400.css";
-import "@fontsource/noto-serif-sc/600.css";
-import "@fontsource/noto-serif-sc/700.css";
+// Noto Serif SC ships several hundred CJK subsets; it is imported by the
+// Chinese page alone so the English page does not carry those @font-face rules.
+import { profile } from "../data/site";
 import "../styles/global.css";
 
 interface Props {
@@ -19,7 +19,6 @@ interface Props {
 const { lang, title, description, canonicalPath, alternatePath } = Astro.props;
 const canonicalUrl = new URL(canonicalPath, Astro.site);
 const alternateUrl = new URL(alternatePath, Astro.site);
-const ogImage = new URL("/images/yichen-zhang.jpg", Astro.site);
 const alternateLang = lang.startsWith("zh") ? "en" : "zh-CN";
 
 const structuredData = {
@@ -27,16 +26,17 @@ const structuredData = {
   "@type": "Person",
   name: "Yichen Zhang",
   url: "https://jarvis-zhang.com",
-  image: ogImage.toString(),
   jobTitle: "Research Student",
+  email: `mailto:${profile.email}`,
   affiliation: {
     "@type": "CollegeOrUniversity",
     name: "Osaka University",
   },
-  sameAs: [
-    "https://github.com/JarvisZhang24",
-    "https://www.linkedin.com/in/yichen-zhang-a0077b2b3",
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "New York University" },
+    { "@type": "CollegeOrUniversity", name: "Beijing Jiaotong University" },
   ],
+  sameAs: [profile.github, profile.linkedin],
   knowsAbout: [
     "Generative AI for Drug Discovery",
     "Biological Foundation Models",
@@ -50,7 +50,8 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f2eee5" />
+    <meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0d12" media="(prefers-color-scheme: dark)" />
     <meta name="description" content={description} />
     <meta name="author" content="Yichen Zhang" />
 
@@ -64,17 +65,34 @@ const structuredData = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content="Yichen Zhang at the Golden Gate Bridge" />
     <meta property="og:site_name" content="Yichen Zhang" />
     <meta property="og:locale" content={lang.startsWith("zh") ? "zh_CN" : "en_US"} />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
 
     <title>{title}</title>
+
+    <script is:inline>
+      // Resolve the colour theme before first paint to avoid a flash.
+      (function () {
+        var root = document.documentElement;
+        try {
+          var stored = localStorage.getItem("theme");
+          root.dataset.theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+        } catch (error) {
+          root.dataset.theme = "light";
+        }
+        root.classList.add("has-js");
+      })();
+    </script>
+
     <script
       type="application/ld+json"
       is:inline
@@ -85,15 +103,42 @@ const structuredData = {
     <slot />
 
     <script>
+      const root = document.documentElement;
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
 
-      document.documentElement.classList.add("has-js");
+      requestAnimationFrame(() => root.classList.add("is-ready"));
 
-      requestAnimationFrame(() => {
-        document.documentElement.classList.add("is-ready");
+      /* Colour theme -------------------------------------------------------- */
+
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+      document
+        .querySelectorAll<HTMLButtonElement>("[data-theme-toggle]")
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            const next = root.dataset.theme === "dark" ? "light" : "dark";
+            root.dataset.theme = next;
+            try {
+              localStorage.setItem("theme", next);
+            } catch (error) {
+              /* storage unavailable — the choice just won't persist */
+            }
+          });
+        });
+
+      systemDark.addEventListener("change", (event) => {
+        let stored: string | null = null;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch (error) {
+          /* ignore */
+        }
+        if (!stored) root.dataset.theme = event.matches ? "dark" : "light";
       });
+
+      /* Scroll reveal ------------------------------------------------------- */
 
       const revealItems = document.querySelectorAll<HTMLElement>("[data-reveal]");
 
@@ -108,42 +153,52 @@ const structuredData = {
               revealObserver.unobserve(entry.target);
             });
           },
-          { rootMargin: "0px 0px -12% 0px", threshold: 0.08 },
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.06 },
         );
 
         revealItems.forEach((item) => revealObserver.observe(item));
       }
 
-      const heroImage = document.querySelector<HTMLElement>("[data-hero-image]");
+      /* Reading progress ---------------------------------------------------- */
 
-      if (heroImage && !prefersReducedMotion) {
+      if (!prefersReducedMotion) {
         let ticking = false;
 
-        const updateImage = () => {
-          const progress = Math.min(window.scrollY / window.innerHeight, 1);
-          heroImage.style.setProperty("--image-shift", `${progress * 22}px`);
+        const updateProgress = () => {
+          const scrollable = root.scrollHeight - window.innerHeight;
+          const progress =
+            scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+          root.style.setProperty("--page-progress", progress.toString());
           ticking = false;
         };
 
+        updateProgress();
         window.addEventListener(
           "scroll",
           () => {
             if (ticking) return;
             ticking = true;
-            requestAnimationFrame(updateImage);
+            requestAnimationFrame(updateProgress);
           },
           { passive: true },
         );
       }
 
-      document.querySelectorAll<HTMLAnchorElement>("[data-language-link]").forEach(
-        (link) => {
+      /* Language preference ------------------------------------------------- */
+
+      document
+        .querySelectorAll<HTMLAnchorElement>("[data-language-link]")
+        .forEach((link) => {
           link.addEventListener("click", () => {
             const language = link.dataset.language;
-            if (language) localStorage.setItem("preferred-language", language);
+            if (!language) return;
+            try {
+              localStorage.setItem("preferred-language", language);
+            } catch (error) {
+              /* ignore */
+            }
           });
-        },
-      );
+        });
     </script>
   </body>
 </html>

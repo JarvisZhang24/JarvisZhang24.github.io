@@ -10,8 +10,8 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/yichen-zhang-a0077b2b3",
   cv: "" as string,
   scholar: "" as string,
-  /** Drop a file at `public/images/portrait.jpg` to swap the monogram for a photo. */
-  portrait: "" as string,
+  /** Files in `public` are served from the site root. */
+  portrait: "/images/InkPunk.png",
 } as const;
 
 type Fact = {
@@ -177,8 +177,8 @@ export const siteContent: Record<Locale, PageContent> = {
       tagline:
         "Generative models for molecules, genomes, and scientific discovery.",
       bio: [
-        "I am a research student at Osaka University, preparing for doctoral study in generative AI for drug discovery. My work centres on generative and foundation models that design molecules and biological sequences while staying inside real scientific constraints.",
-        "I came to AI from finance, where quantitative models first showed me how computation reveals hidden structure. During my M.S. at NYU I moved deeper into engineering and machine learning — building multimodal systems and genomic foundation-model pipelines. That path shaped the question I work on now: how can generative intelligence make scientific discovery both faster and more reliable?",
+        "I am a research student at Osaka University preparing for doctoral work in generative AI for drug discovery. I build generative and foundation models for molecules and biological sequences under real scientific constraints.",
+        "My path into AI began in finance and continued through computer engineering at NYU, where I worked on multimodal systems and genomic foundation models. It shaped the question I pursue now: how can generative intelligence make scientific discovery faster and more reliable?",
       ],
       status:
         "Open to doctoral positions and research collaborations in generative AI for the life sciences.",
@@ -382,8 +382,8 @@ export const siteContent: Record<Locale, PageContent> = {
       affiliation: "大阪大学",
       tagline: "用生成模型理解分子、基因组，并加速科学发现。",
       bio: [
-        "我目前是大阪大学的研究生，正在为生成式人工智能与药物发现方向的博士研究做准备。我的工作聚焦于让生成模型与基础模型在真实科学约束下设计分子与生物序列。",
-        "我最初从金融领域接触量化模型，并由此看到计算方法揭示隐藏结构的力量。在纽约大学攻读硕士期间，我逐步转向工程与机器学习，构建多模态系统与基因组基础模型流程。这段跨学科经历最终形成了我现在关注的问题：生成式智能如何让科学发现既更快，也更可靠？",
+        "我目前在大阪大学为生成式人工智能与药物发现方向的博士研究做准备，关注能在真实科学约束下设计分子与生物序列的生成模型与基础模型。",
+        "我从金融与量化建模进入人工智能，并在纽约大学攻读计算机工程硕士期间转向多模态系统和基因组基础模型。现在我关注的问题是：生成式智能如何让科学发现更快、更可靠？",
       ],
       status: "正在寻找生成式人工智能与生命科学交叉方向的博士机会与研究合作。",
       facts: [

@@ -40,7 +40,14 @@ const index = Object.fromEntries(
       <div class="avatar" aria-hidden="true">
         {
           profile.portrait ? (
-            <img src={profile.portrait} alt="" width="96" height="96" />
+            <img
+              src={profile.portrait}
+              alt=""
+              width="96"
+              height="96"
+              loading="eager"
+              fetchpriority="high"
+            />
           ) : (
             <span>{content.profile.monogram}</span>
           )

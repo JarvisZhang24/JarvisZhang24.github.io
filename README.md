@@ -29,6 +29,28 @@ has entries.
 对应链接（或用照片替换 `YZ` 字母标记）会自动出现。`publications.items` 有内容时
 才会渲染论文分区。
 
+## Writing posts / 写文章
+
+Posts are Markdown files under `src/content/blog/`, one folder per language:
+
+```
+src/content/blog/en/<slug>.md    → /blog/<slug>/
+src/content/blog/zh/<slug>.md    → /zh/blog/<slug>/
+```
+
+Frontmatter: `title`, `description`, and `date` are required; `updated`, `tags`,
+and `draft` are optional. `draft: true` keeps a post visible in `bun run dev`
+while excluding it from `bun run build`, so unfinished pieces can live in the
+repository safely. Using the **same slug in both folders** links the two
+translations together in the language switch. The Writing section on the
+homepage and the nav link both appear automatically once a post is published.
+
+文章是 `src/content/blog/` 下的 Markdown 文件，按语言分目录（如上）。frontmatter 中
+`title`、`description`、`date` 必填，`updated`、`tags`、`draft` 可选。`draft: true`
+的文章在 `bun run dev` 下可见，但不会进入 `bun run build`，因此未完成的稿子可以安全地
+留在仓库里。**两个目录使用相同的 slug** 即可让语言切换在两篇译文之间跳转。主页的「写作」
+分区与导航入口会在有已发布文章后自动出现。
+
 ## Quality checks / 构建检查
 
 ```bash

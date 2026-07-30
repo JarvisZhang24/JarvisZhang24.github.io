@@ -1,0 +1,11 @@
+/**
+ * CJK webfonts, imported only by the pages under /zh/.
+ *
+ * Both families are the variable builds: one file per unicode subset covering
+ * the whole weight axis, instead of one file per subset *per weight*. That cuts
+ * this stylesheet from ~490 @font-face rules to ~200. Keeping it off the
+ * English pages saves them the remainder entirely — browsers still download
+ * only the subsets a page actually renders.
+ */
+@import "@fontsource-variable/noto-serif-sc";
+@import "@fontsource-variable/noto-sans-sc";

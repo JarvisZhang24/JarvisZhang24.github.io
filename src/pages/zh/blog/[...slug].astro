@@ -1,0 +1,70 @@
+---
+import "../../../styles/fonts-zh.css";
+import BlogPost from "../../../components/BlogPost.astro";
+import { getPosts, postSlug, type Post } from "../../../data/blog";
+import { siteContent } from "../../../data/site";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getPosts("zh");
+  const translated = new Set((await getPosts("en")).map(postSlug));
+
+  return posts.map((post, i) => {
+    const slug = postSlug(post);
+    return {
+      params: { slug },
+      props: {
+        post,
+        newer: posts[i - 1],
+        older: posts[i + 1],
+        // Fall back to the English index when this post has no counterpart.
+        alternatePath: translated.has(slug) ? `/blog/${slug}/` : "/blog/",
+      },
+    };
+  });
+}
+
+interface Props {
+  post: Post;
+  newer?: Post;
+  older?: Post;
+  alternatePath: string;
+}
+
+const { post, newer, older, alternatePath } = Astro.props;
+const content = siteContent.zh;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date.toISOString(),
+  ...(post.data.updated ? { dateModified: post.data.updated.toISOString() } : {}),
+  author: {
+    "@type": "Person",
+    name: "Yichen Zhang",
+    url: "https://jarvis-zhang.com",
+  },
+  keywords: post.data.tags.join(", "),
+  inLanguage: content.htmlLang,
+};
+---
+
+<BaseLayout
+  lang={content.htmlLang}
+  title={`${post.data.title} — Yichen Zhang`}
+  description={post.data.description}
+  canonicalPath={`/zh/blog/${postSlug(post)}/`}
+  alternatePath={alternatePath}
+  ogType="article"
+  schema={schema}
+>
+  <BlogPost
+    content={content}
+    post={post}
+    newer={newer}
+    older={older}
+    alternatePath={alternatePath}
+  />
+</BaseLayout>

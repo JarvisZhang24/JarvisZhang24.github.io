@@ -1,5 +1,7 @@
 ---
+import { formatDate, getPosts, postPath } from "../data/blog";
 import { profile, type PageContent } from "../data/site";
+import SiteFooter from "./SiteFooter.astro";
 import SiteHeader from "./SiteHeader.astro";
 
 interface Props {
@@ -8,6 +10,24 @@ interface Props {
 
 const { content } = Astro.props;
 const mailto = `mailto:${profile.email}`;
+
+const recentPosts = (await getPosts(content.locale)).slice(0, 3);
+const blogPath = content.locale === "en" ? "/blog/" : "/zh/blog/";
+
+// Section numbers are derived so optional sections cannot knock them out of order.
+const present = [
+  "about",
+  "research",
+  "projects",
+  ...(recentPosts.length > 0 ? ["writing"] : []),
+  ...(content.publications.items.length > 0 ? ["publications"] : []),
+  "education",
+  "toolkit",
+  "contact",
+];
+const index = Object.fromEntries(
+  present.map((key, i) => [key, String(i + 1).padStart(2, "0")]),
+) as Record<string, string>;
 ---
 
 <SiteHeader content={content} />
@@ -88,7 +108,7 @@ const mailto = `mailto:${profile.email}`;
 
   <section class="section" id="about" aria-labelledby="about-title">
     <div class="section__head" data-reveal>
-      <span class="section__index" aria-hidden="true">01</span>
+      <span class="section__index" aria-hidden="true">{index.about}</span>
       <h2 class="section__title" id="about-title">{content.sections.about}</h2>
       <span class="section__rule" aria-hidden="true"></span>
     </div>
@@ -99,7 +119,7 @@ const mailto = `mailto:${profile.email}`;
 
   <section class="section" id="research" aria-labelledby="research-title">
     <div class="section__head" data-reveal>
-      <span class="section__index" aria-hidden="true">02</span>
+      <span class="section__index" aria-hidden="true">{index.research}</span>
       <h2 class="section__title" id="research-title">{content.sections.research}</h2>
       <span class="section__rule" aria-hidden="true"></span>
     </div>
@@ -129,7 +149,7 @@ const mailto = `mailto:${profile.email}`;
 
   <section class="section" id="projects" aria-labelledby="projects-title">
     <div class="section__head" data-reveal>
-      <span class="section__index" aria-hidden="true">03</span>
+      <span class="section__index" aria-hidden="true">{index.projects}</span>
       <h2 class="section__title" id="projects-title">{content.sections.projects}</h2>
       <span class="section__rule" aria-hidden="true"></span>
     </div>
@@ -175,11 +195,58 @@ const mailto = `mailto:${profile.email}`;
   </section>
 
   {
+    recentPosts.length > 0 && (
+      <section class="section" id="writing" aria-labelledby="writing-title">
+        <div class="section__head" data-reveal>
+          <span class="section__index" aria-hidden="true">
+            {index.writing}
+          </span>
+          <h2 class="section__title" id="writing-title">
+            {content.sections.writing}
+          </h2>
+          <span class="section__rule" aria-hidden="true" />
+        </div>
+        <p class="section__lead" data-reveal>
+          {content.blog.homeLead}
+        </p>
+
+        <ol class="post-list post-list--compact">
+          {recentPosts.map((post) => (
+            <li class="post-item" data-reveal>
+              <a href={postPath(post, content.locale)}>
+                <time class="mono-label post-item__date" datetime={post.data.date.toISOString()}>
+                  {formatDate(post.data.date, content.locale)}
+                </time>
+                <div class="post-item__body">
+                  <h3 class="post-item__title">
+                    {post.data.title}
+                    {post.data.draft && (
+                      <span class="badge">{content.blog.draftLabel}</span>
+                    )}
+                  </h3>
+                </div>
+                <span class="arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+
+        <a class="section__more" href={blogPath} data-reveal>
+          <span>{content.blog.viewAll}</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </section>
+    )
+  }
+
+  {
     content.publications.items.length > 0 && (
       <section class="section" id="publications" aria-labelledby="publications-title">
         <div class="section__head" data-reveal>
           <span class="section__index" aria-hidden="true">
-            04
+            {index.publications}
           </span>
           <h2 class="section__title" id="publications-title">
             {content.sections.publications}
@@ -209,9 +276,7 @@ const mailto = `mailto:${profile.email}`;
 
   <section class="section" id="education" aria-labelledby="education-title">
     <div class="section__head" data-reveal>
-      <span class="section__index" aria-hidden="true">
-        {content.publications.items.length > 0 ? "05" : "04"}
-      </span>
+      <span class="section__index" aria-hidden="true">{index.education}</span>
       <h2 class="section__title" id="education-title">{content.sections.education}</h2>
       <span class="section__rule" aria-hidden="true"></span>
     </div>
@@ -235,9 +300,7 @@ const mailto = `mailto:${profile.email}`;
 
   <section class="section" id="toolkit" aria-labelledby="toolkit-title">
     <div class="section__head" data-reveal>
-      <span class="section__index" aria-hidden="true">
-        {content.publications.items.length > 0 ? "06" : "05"}
-      </span>
+      <span class="section__index" aria-hidden="true">{index.toolkit}</span>
       <h2 class="section__title" id="toolkit-title">{content.sections.toolkit}</h2>
       <span class="section__rule" aria-hidden="true"></span>
     </div>
@@ -260,9 +323,7 @@ const mailto = `mailto:${profile.email}`;
 
   <section class="section section--contact" id="contact" aria-labelledby="contact-title">
     <div class="section__head" data-reveal>
-      <span class="section__index" aria-hidden="true">
-        {content.publications.items.length > 0 ? "07" : "06"}
-      </span>
+      <span class="section__index" aria-hidden="true">{index.contact}</span>
       <h2 class="section__title" id="contact-title">{content.sections.contact}</h2>
       <span class="section__rule" aria-hidden="true"></span>
     </div>
@@ -277,12 +338,4 @@ const mailto = `mailto:${profile.email}`;
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <p class="mono-label">© {new Date().getFullYear()} {content.profile.name}</p>
-    <p class="mono-label site-footer__note">{content.footer.note}</p>
-    <a class="mono-label site-footer__top" href="#main">
-      {content.footer.backToTop} ↑
-    </a>
-  </div>
-</footer>
+<SiteFooter content={content} />

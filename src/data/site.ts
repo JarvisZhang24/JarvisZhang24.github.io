@@ -5,7 +5,7 @@ export type Locale = "en" | "zh";
  * the corresponding link appears automatically in the header and profile row.
  */
 export const profile = {
-  email: "yz10759@nyu.edu",
+  email: "z.yichen@outlook.com",
   github: "https://github.com/JarvisZhang24",
   linkedin: "https://www.linkedin.com/in/yichen-zhang-a0077b2b3",
   cv: "" as string,
@@ -71,6 +71,7 @@ export type PageContent = {
     research: string;
     projects: string;
     education: string;
+    writing: string;
     contact: string;
     skip: string;
     theme: string;
@@ -92,10 +93,28 @@ export type PageContent = {
     about: string;
     research: string;
     projects: string;
+    writing: string;
     publications: string;
     education: string;
     toolkit: string;
     contact: string;
+  };
+  blog: {
+    meta: {
+      title: string;
+      description: string;
+    };
+    title: string;
+    lead: string;
+    empty: string;
+    homeLead: string;
+    viewAll: string;
+    backToIndex: string;
+    minutesLabel: string;
+    draftLabel: string;
+    updatedLabel: string;
+    newer: string;
+    older: string;
   };
   research: {
     lead: string;
@@ -145,6 +164,7 @@ export const siteContent: Record<Locale, PageContent> = {
       research: "Research",
       projects: "Projects",
       education: "Education",
+      writing: "Writing",
       contact: "Contact",
       skip: "Skip to content",
       theme: "Toggle colour theme",
@@ -175,10 +195,29 @@ export const siteContent: Record<Locale, PageContent> = {
       about: "About",
       research: "Research Interests",
       projects: "Selected Projects",
+      writing: "Writing",
       publications: "Publications",
       education: "Education",
       toolkit: "Toolkit",
       contact: "Contact",
+    },
+    blog: {
+      meta: {
+        title: "Writing — Yichen Zhang",
+        description:
+          "Notes on generative AI for scientific discovery, biological foundation models, and the engineering behind them.",
+      },
+      title: "Writing",
+      lead: "Notes on generative models, biological data, and the engineering it takes to make them useful.",
+      empty: "No posts published yet — the first notes are on their way.",
+      homeLead: "Recent notes from the lab notebook.",
+      viewAll: "All posts",
+      backToIndex: "All writing",
+      minutesLabel: "min read",
+      draftLabel: "Draft",
+      updatedLabel: "Updated",
+      newer: "Newer",
+      older: "Older",
     },
     research: {
       lead: "Three connected directions — from learning biological structure to generating candidates that hold up under evaluation.",
@@ -331,6 +370,7 @@ export const siteContent: Record<Locale, PageContent> = {
       research: "研究方向",
       projects: "项目",
       education: "教育经历",
+      writing: "写作",
       contact: "联系",
       skip: "跳至正文",
       theme: "切换配色主题",
@@ -359,10 +399,29 @@ export const siteContent: Record<Locale, PageContent> = {
       about: "关于",
       research: "研究方向",
       projects: "精选项目",
+      writing: "写作",
       publications: "论文",
       education: "教育经历",
       toolkit: "技术栈",
       contact: "联系",
+    },
+    blog: {
+      meta: {
+        title: "写作 — Yichen Zhang",
+        description:
+          "关于面向科学发现的生成式人工智能、生物基础模型，以及背后工程实现的记录。",
+      },
+      title: "写作",
+      lead: "关于生成模型、生物数据，以及让它们真正可用所需要的工程细节的记录。",
+      empty: "还没有公开的文章，第一篇正在路上。",
+      homeLead: "最近的研究笔记。",
+      viewAll: "全部文章",
+      backToIndex: "全部文章",
+      minutesLabel: "分钟阅读",
+      draftLabel: "草稿",
+      updatedLabel: "更新于",
+      newer: "更新的",
+      older: "更早的",
     },
     research: {
       lead: "三个彼此关联的方向：从理解生物结构，到生成经得起验证的候选方案。",

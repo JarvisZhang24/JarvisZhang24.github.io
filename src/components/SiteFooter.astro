@@ -1,0 +1,19 @@
+---
+import type { PageContent } from "../data/site";
+
+interface Props {
+  content: PageContent;
+}
+
+const { content } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="mono-label">© {new Date().getFullYear()} {content.profile.name}</p>
+    <p class="mono-label site-footer__note">{content.footer.note}</p>
+    <a class="mono-label site-footer__top" href="#main">
+      {content.footer.backToTop} ↑
+    </a>
+  </div>
+</footer>

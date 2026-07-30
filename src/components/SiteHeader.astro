@@ -1,12 +1,25 @@
 ---
+import { getPosts } from "../data/blog";
 import type { PageContent } from "../data/site";
 
 interface Props {
   content: PageContent;
+  /** Overrides the language switch target on pages other than the homepage. */
+  alternatePath?: string;
 }
 
-const { content } = Astro.props;
+const { content, alternatePath = content.alternatePath } = Astro.props;
+
 const home = content.locale === "en" ? "/" : "/zh/";
+const blogPath = content.locale === "en" ? "/blog/" : "/zh/blog/";
+
+// Section links are in-page anchors on the homepage and cross-page links elsewhere.
+const onHome = Astro.url.pathname === home;
+const section = (id: string) => (onHome ? `#${id}` : `${home}#${id}`);
+const inBlog = Astro.url.pathname.startsWith(blogPath);
+
+// Only advertise the blog once something is published in this language.
+const hasPosts = (await getPosts(content.locale)).length > 0;
 ---
 
 <a class="skip-link" href="#main">{content.nav.skip}</a>
@@ -19,11 +32,17 @@ const home = content.locale === "en" ? "/" : "/zh/";
     </a>
 
     <nav class="masthead__nav" aria-label="Sections">
-      <a href="#about">{content.nav.about}</a>
-      <a href="#research">{content.nav.research}</a>
-      <a href="#projects">{content.nav.projects}</a>
-      <a href="#education">{content.nav.education}</a>
-      <a href="#contact">{content.nav.contact}</a>
+      <a href={section("about")}>{content.nav.about}</a>
+      <a href={section("research")}>{content.nav.research}</a>
+      <a href={section("projects")}>{content.nav.projects}</a>
+      {
+        (hasPosts || inBlog) && (
+          <a href={blogPath} aria-current={inBlog ? "page" : undefined}>
+            {content.nav.writing}
+          </a>
+        )
+      }
+      <a href={section("contact")}>{content.nav.contact}</a>
     </nav>
 
     <div class="masthead__tools">
@@ -49,7 +68,7 @@ const home = content.locale === "en" ? "/" : "/zh/";
 
       <a
         class="lang-switch"
-        href={content.alternatePath}
+        href={alternatePath}
         lang={content.locale === "en" ? "zh-CN" : "en"}
         hreflang={content.locale === "en" ? "zh-CN" : "en"}
         data-language-link

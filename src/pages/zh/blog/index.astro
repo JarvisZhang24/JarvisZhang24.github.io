@@ -1,0 +1,22 @@
+---
+import "../../../styles/fonts-zh.css";
+import BlogIndex from "../../../components/BlogIndex.astro";
+import { getPosts } from "../../../data/blog";
+import { siteContent } from "../../../data/site";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const content = siteContent.zh;
+const posts = await getPosts("zh");
+const alternatePath = "/blog/";
+---
+
+<BaseLayout
+  lang={content.htmlLang}
+  title={content.blog.meta.title}
+  description={content.blog.meta.description}
+  canonicalPath="/zh/blog/"
+  alternatePath={alternatePath}
+  ogType="website"
+>
+  <BlogIndex content={content} posts={posts} alternatePath={alternatePath} />
+</BaseLayout>

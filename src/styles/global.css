@@ -18,14 +18,21 @@
   --grid-dot: rgba(15, 20, 25, 0.2);
   --shadow: 0 1px 2px rgba(15, 20, 25, 0.04), 0 8px 24px rgba(15, 20, 25, 0.04);
 
-  --font-sans: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Source Serif 4", "Noto Serif SC", Georgia, serif;
-  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo,
-    monospace;
+  /* Type roles: serif carries everything you read as prose, mono carries
+     metadata (labels, tags, dates, code), sans is reserved for interface
+     chrome. Each stack pairs a Latin face with its CJK counterpart, which the
+     browser picks per glyph. */
+  --font-serif: "Source Serif 4", "Noto Serif SC Variable", Georgia, serif;
+  --font-sans: "Inter Variable", "Noto Sans SC Variable", system-ui,
+    -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono Variable", "Noto Sans SC Variable", ui-monospace,
+    SFMono-Regular, Menlo, monospace;
 
-  --measure: 46rem;
+  /* Reading column, trimmed from 46rem so the larger root size below does not
+     widen it proportionally along with the type. */
+  --measure: 43rem;
   --pad: clamp(1.25rem, 5vw, 2.25rem);
-  --header-h: 3.5rem;
+  --header-h: 3.25rem;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -80,6 +87,11 @@
 }
 
 html {
+  /* Scales the whole rem-based type and spacing system up by 12.5% (16px → 18px
+     base). Expressed as a percentage so it still honours a reader's own browser
+     font-size setting. Media-query breakpoints are unaffected: `rem` there
+     always resolves against the browser default, not this value. */
+  font-size: 112.5%;
   background: var(--bg);
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 2rem);
@@ -93,9 +105,18 @@ body {
   overflow-x: clip;
   background: var(--bg);
   color: var(--ink-soft);
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+/* Interface chrome opts back out of the serif default. */
+.skip-link,
+.masthead__nav,
+.channels a,
+.facts__item dd,
+.timeline__degree {
   font-family: var(--font-sans);
-  font-size: 0.975rem;
-  line-height: 1.72;
 }
 
 h1,
@@ -530,7 +551,7 @@ html:lang(zh-CN) .intro__tagline {
   border-radius: 6px;
   background: var(--accent-soft);
   color: var(--ink-soft);
-  font-size: 0.86rem;
+  font-size: 0.94rem;
   line-height: 1.6;
 }
 
@@ -652,10 +673,10 @@ html:lang(zh-CN) .intro__tagline {
 }
 
 .section__lead {
-  max-width: 58ch;
+  max-width: 62ch;
   margin-bottom: 2rem;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
 }
 
 html:lang(zh-CN) .section__lead {
@@ -663,9 +684,9 @@ html:lang(zh-CN) .section__lead {
 }
 
 .prose {
-  max-width: 62ch;
+  max-width: 66ch;
   color: var(--ink-soft);
-  font-size: 1rem;
+  font-size: 1.06rem;
   line-height: 1.82;
 }
 
@@ -711,7 +732,7 @@ html:lang(zh-CN) .section__lead {
 
 .area__title {
   color: var(--ink);
-  font-size: 1rem;
+  font-size: 1.06rem;
   font-weight: 600;
   letter-spacing: -0.008em;
 }
@@ -720,7 +741,7 @@ html:lang(zh-CN) .section__lead {
   max-width: 52ch;
   margin-top: 0.4rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   line-height: 1.68;
 }
 
@@ -808,7 +829,7 @@ html:lang(zh-CN) .section__lead {
   max-width: 56ch;
   margin-top: 1rem;
   color: var(--ink-soft);
-  font-size: 0.94rem;
+  font-size: 1rem;
 }
 
 .project__outcome {
@@ -817,7 +838,7 @@ html:lang(zh-CN) .section__lead {
   padding-left: 0.9rem;
   border-left: 1px solid var(--line-strong);
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.94rem;
   line-height: 1.68;
   transition: border-color 200ms ease;
 }
@@ -833,13 +854,13 @@ html:lang(zh-CN) .section__lead {
 
 .publication__authors {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.92rem;
 }
 
 .publication__title {
   margin-top: 0.2rem;
   color: var(--ink);
-  font-size: 1rem;
+  font-size: 1.06rem;
   font-weight: 600;
 }
 
@@ -881,7 +902,7 @@ html:lang(zh-CN) .section__lead {
 
 .timeline__institution {
   color: var(--ink);
-  font-size: 0.98rem;
+  font-size: 1.04rem;
   font-weight: 600;
   letter-spacing: -0.006em;
 }
@@ -967,6 +988,478 @@ html:lang(zh-CN) .section__lead {
 
 .contact-card:hover .arrow {
   transform: translate(0.2rem, -0.2rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Blog — index
+--------------------------------------------------------------------------- */
+
+.page-head {
+  position: relative;
+  padding: clamp(3rem, 8vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+  isolation: isolate;
+}
+
+.page-head__field {
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--header-h) * -1);
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-position: center top;
+  background-size: 24px 24px;
+  opacity: 0.7;
+  -webkit-mask-image: radial-gradient(
+    ellipse 40% 80% at 50% 6%,
+    #000 0%,
+    transparent 70%
+  );
+  mask-image: radial-gradient(ellipse 40% 80% at 50% 6%, #000 0%, transparent 70%);
+}
+
+.page-head__title {
+  margin-top: 0.6rem;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5.5vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.026em;
+  line-height: 1.1;
+}
+
+.page-head__lead {
+  max-width: 52ch;
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 1.03rem;
+}
+
+html:lang(zh-CN) .page-head__lead {
+  max-width: 28em;
+}
+
+.empty-note {
+  padding: 2rem 0 5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.post-list {
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  border-top: 1px solid var(--line);
+}
+
+.post-list--compact {
+  padding-bottom: 0;
+}
+
+.post-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.post-item > a {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr) 1.5rem;
+  align-items: baseline;
+  gap: 0.35rem 1.2rem;
+  padding: 1.4rem 0;
+  transition: background-color 200ms ease;
+}
+
+.post-list--compact .post-item > a {
+  padding: 1rem 0;
+}
+
+.post-item__date {
+  color: var(--accent);
+}
+
+.post-item__title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.014em;
+  line-height: 1.3;
+  transition: color 200ms ease;
+}
+
+.post-item > a:hover .post-item__title,
+.post-item > a:focus-visible .post-item__title {
+  color: var(--accent);
+}
+
+.post-item__summary {
+  max-width: 56ch;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.post-item__meta {
+  margin-top: 0.55rem;
+}
+
+.post-item .arrow {
+  justify-self: end;
+  color: var(--muted);
+}
+
+.post-item > a:hover .arrow,
+.post-item > a:focus-visible .arrow {
+  color: var(--accent);
+  transform: translateX(0.2rem);
+}
+
+.badge {
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section__more {
+  display: inline-flex;
+  margin-top: 1.4rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.section__more:hover,
+.section__more:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.section__more:hover .arrow {
+  transform: translateX(0.2rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Blog — post
+--------------------------------------------------------------------------- */
+
+.post {
+  padding: clamp(2rem, 6vw, 3.25rem) 0 clamp(3rem, 8vw, 5rem);
+}
+
+.post__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  transition: color 180ms ease;
+}
+
+.post__back:hover,
+.post__back:focus-visible {
+  color: var(--accent);
+}
+
+.arrow--back {
+  transition: transform 200ms ease;
+}
+
+.post__back:hover .arrow--back {
+  transform: translateX(-0.2rem);
+}
+
+.post__head {
+  padding: 1.75rem 0 1.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.post__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post__draft {
+  color: var(--accent);
+}
+
+.post__title {
+  margin-top: 0.75rem;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 5vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.026em;
+  line-height: 1.14;
+}
+
+.post__lead {
+  max-width: 54ch;
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+html:lang(zh-CN) .post__lead {
+  max-width: 30em;
+}
+
+.post__updated {
+  margin-top: 1rem;
+}
+
+.post__nav {
+  display: grid;
+  margin-top: clamp(2.5rem, 6vw, 3.5rem);
+  /* auto-fit so a post with only one neighbour gets a single full-width cell
+     instead of an empty panel. */
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.post__nav-link {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.1rem 1.2rem;
+  background: var(--bg-raised);
+  transition: background-color 200ms ease;
+}
+
+.post__nav-link:hover {
+  background: var(--accent-soft);
+}
+
+.post__nav-link .mono-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.post__nav-link--end {
+  justify-items: end;
+  text-align: right;
+}
+
+.post__nav-title {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+/* ---------------------------------------------------------------------------
+   Markdown body
+--------------------------------------------------------------------------- */
+
+.markdown {
+  max-width: 72ch;
+  padding-top: 2rem;
+  color: var(--ink-soft);
+  font-size: 1.06rem;
+  line-height: 1.82;
+}
+
+html:lang(zh-CN) .markdown {
+  max-width: 36em;
+}
+
+.markdown > * + * {
+  margin-top: 1.15em;
+}
+
+.markdown h2 {
+  margin-top: 2.4em;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: -0.014em;
+  line-height: 1.3;
+}
+
+.markdown h3 {
+  margin-top: 1.9em;
+  color: var(--ink);
+  font-size: 1.04rem;
+  font-weight: 600;
+  letter-spacing: -0.006em;
+}
+
+.markdown h2 + *,
+.markdown h3 + * {
+  margin-top: 0.7em;
+}
+
+.markdown strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.markdown a {
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--ink);
+  transition:
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.markdown a:hover,
+.markdown a:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.35rem;
+  list-style: revert;
+}
+
+.markdown li::marker {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.markdown li + li {
+  margin-top: 0.4em;
+}
+
+.markdown blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.15rem 0 0.15rem 1.15rem;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-family: var(--font-serif);
+  font-size: 1.04rem;
+  font-style: italic;
+}
+
+html:lang(zh-CN) .markdown blockquote {
+  font-style: normal;
+}
+
+.markdown :not(pre) > code {
+  padding: 0.12em 0.36em;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+}
+
+.markdown pre {
+  margin: 1.6em 0;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.83rem;
+  line-height: 1.7;
+  tab-size: 2;
+}
+
+.markdown pre code {
+  font-family: var(--font-mono);
+}
+
+.markdown hr {
+  margin: 2.6em 0;
+  height: 1px;
+  border: 0;
+  background: var(--line);
+}
+
+/* `display: block` keeps a wide table scrollable instead of overflowing the
+   page, which `overflow-x: clip` on the body would otherwise make unreachable. */
+.markdown table {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.markdown th,
+.markdown td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown th {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.markdown thead {
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.markdown img {
+  margin: 1.8em 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+/* Shiki dual-theme swap. */
+:root[data-theme="dark"] .astro-code,
+:root[data-theme="dark"] .astro-code span {
+  background-color: var(--shiki-dark-bg) !important;
+  color: var(--shiki-dark) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .astro-code,
+  :root:not([data-theme="light"]) .astro-code span {
+    background-color: var(--shiki-dark-bg) !important;
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
 }
 
 /* ---------------------------------------------------------------------------
@@ -1065,6 +1558,12 @@ html:lang(zh-CN) .section__lead {
 --------------------------------------------------------------------------- */
 
 @media (max-width: 40rem) {
+  /* A narrow column cannot carry the full desktop bump — at 18px a Chinese line
+     holds only ~18 characters. Step back to 17px. */
+  html {
+    font-size: 106.25%;
+  }
+
   :root {
     --header-h: 3.25rem;
   }
@@ -1140,6 +1639,23 @@ html:lang(zh-CN) .section__lead {
     border-right: 0;
   }
 
+  .post-item > a {
+    grid-template-columns: minmax(0, 1fr) 1.5rem;
+  }
+
+  .post-item__date {
+    grid-column: 1 / -1;
+  }
+
+  .post__nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post__nav-link--end {
+    justify-items: start;
+    text-align: left;
+  }
+
   .site-footer__inner {
     flex-direction: column;
     align-items: flex-start;
@@ -1184,9 +1700,17 @@ html:lang(zh-CN) .section__lead {
 
   .masthead,
   .intro__field,
+  .page-head__field,
+  .post__back,
+  .post__nav,
   .site-footer__top,
   .status__pulse {
     display: none;
+  }
+
+  .markdown pre {
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 
   .section {

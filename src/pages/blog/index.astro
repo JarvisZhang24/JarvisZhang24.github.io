@@ -1,0 +1,21 @@
+---
+import BlogIndex from "../../components/BlogIndex.astro";
+import { getPosts } from "../../data/blog";
+import { siteContent } from "../../data/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const content = siteContent.en;
+const posts = await getPosts("en");
+const alternatePath = "/zh/blog/";
+---
+
+<BaseLayout
+  lang={content.htmlLang}
+  title={content.blog.meta.title}
+  description={content.blog.meta.description}
+  canonicalPath="/blog/"
+  alternatePath={alternatePath}
+  ogType="website"
+>
+  <BlogIndex content={content} posts={posts} alternatePath={alternatePath} />
+</BaseLayout>

@@ -1,0 +1,113 @@
+---
+import { render } from "astro:content";
+import { formatDate, postPath, readingMinutes, type Post } from "../data/blog";
+import type { PageContent } from "../data/site";
+import SiteFooter from "./SiteFooter.astro";
+import SiteHeader from "./SiteHeader.astro";
+
+interface Props {
+  content: PageContent;
+  post: Post;
+  newer?: Post;
+  older?: Post;
+  alternatePath: string;
+}
+
+const { content, post, newer, older, alternatePath } = Astro.props;
+const { Content } = await render(post);
+
+const blogPath = content.locale === "en" ? "/blog/" : "/zh/blog/";
+const minutes = readingMinutes(post.body);
+---
+
+<SiteHeader content={content} alternatePath={alternatePath} />
+
+<main id="main">
+  <article class="post">
+    <a class="post__back" href={blogPath}>
+      <span class="arrow arrow--back" aria-hidden="true">←</span>
+      <span>{content.blog.backToIndex}</span>
+    </a>
+
+    <header class="post__head">
+      <p class="mono-label post__meta">
+        <time datetime={post.data.date.toISOString()}>
+          {formatDate(post.data.date, content.locale)}
+        </time>
+        <span aria-hidden="true">·</span>
+        <span>{minutes} {content.blog.minutesLabel}</span>
+        {
+          post.data.draft && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span class="post__draft">{content.blog.draftLabel}</span>
+            </>
+          )
+        }
+      </p>
+
+      <h1 class="post__title">{post.data.title}</h1>
+      <p class="post__lead">{post.data.description}</p>
+
+      {
+        post.data.tags.length > 0 && (
+          <ul class="tags">
+            {post.data.tags.map((tag) => (
+              <li class="tag">{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        post.data.updated && (
+          <p class="mono-label post__updated">
+            {content.blog.updatedLabel}{" "}
+            <time datetime={post.data.updated.toISOString()}>
+              {formatDate(post.data.updated, content.locale)}
+            </time>
+          </p>
+        )
+      }
+    </header>
+
+    <div class="markdown">
+      <Content />
+    </div>
+
+    {
+      (newer || older) && (
+        <nav class="post__nav" aria-label={content.blog.backToIndex}>
+          {newer && (
+            <a class="post__nav-link" href={postPath(newer, content.locale)}>
+              <span class="mono-label">
+                <span class="arrow arrow--back" aria-hidden="true">
+                  ←
+                </span>
+                {content.blog.newer}
+              </span>
+              <span class="post__nav-title">{newer.data.title}</span>
+            </a>
+          )}
+
+          {older && (
+            <a
+              class="post__nav-link post__nav-link--end"
+              href={postPath(older, content.locale)}
+            >
+              <span class="mono-label">
+                {content.blog.older}
+                <span class="arrow" aria-hidden="true">
+                  →
+                </span>
+              </span>
+              <span class="post__nav-title">{older.data.title}</span>
+            </a>
+          )}
+        </nav>
+      )
+    }
+  </article>
+</main>
+
+<SiteFooter content={content} />

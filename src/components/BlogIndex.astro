@@ -25,7 +25,9 @@ const { content, posts, alternatePath } = Astro.props;
 
   {
     posts.length === 0 ? (
-      <p class="empty-note">{content.blog.empty}</p>
+      <div class="blog-empty" data-reveal>
+        <p>{content.blog.empty}</p>
+      </div>
     ) : (
       <ol class="post-list">
         {posts.map((post) => (

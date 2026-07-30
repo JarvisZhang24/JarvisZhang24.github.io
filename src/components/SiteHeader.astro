@@ -1,5 +1,4 @@
 ---
-import { getPosts } from "../data/blog";
 import type { PageContent } from "../data/site";
 
 interface Props {
@@ -17,9 +16,6 @@ const blogPath = content.locale === "en" ? "/blog/" : "/zh/blog/";
 const onHome = Astro.url.pathname === home;
 const section = (id: string) => (onHome ? `#${id}` : `${home}#${id}`);
 const inBlog = Astro.url.pathname.startsWith(blogPath);
-
-// Only advertise the blog once something is published in this language.
-const hasPosts = (await getPosts(content.locale)).length > 0;
 ---
 
 <a class="skip-link" href="#main">{content.nav.skip}</a>
@@ -35,17 +31,20 @@ const hasPosts = (await getPosts(content.locale)).length > 0;
       <a href={section("about")}>{content.nav.about}</a>
       <a href={section("research")}>{content.nav.research}</a>
       <a href={section("projects")}>{content.nav.projects}</a>
-      {
-        (hasPosts || inBlog) && (
-          <a href={blogPath} aria-current={inBlog ? "page" : undefined}>
-            {content.nav.writing}
-          </a>
-        )
-      }
+      <a href={blogPath} aria-current={inBlog ? "page" : undefined}>
+        {content.nav.writing}
+      </a>
       <a href={section("contact")}>{content.nav.contact}</a>
     </nav>
 
     <div class="masthead__tools">
+      <a
+        class="masthead__blog-link"
+        href={blogPath}
+        aria-current={inBlog ? "page" : undefined}
+      >
+        {content.nav.writing}
+      </a>
       <button
         class="theme-toggle"
         type="button"

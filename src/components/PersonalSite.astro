@@ -19,7 +19,7 @@ const present = [
   "about",
   "research",
   "projects",
-  ...(recentPosts.length > 0 ? ["writing"] : []),
+  "writing",
   ...(content.publications.items.length > 0 ? ["publications"] : []),
   "education",
   "toolkit",
@@ -201,22 +201,22 @@ const index = Object.fromEntries(
     </div>
   </section>
 
-  {
-    recentPosts.length > 0 && (
-      <section class="section" id="writing" aria-labelledby="writing-title">
-        <div class="section__head" data-reveal>
-          <span class="section__index" aria-hidden="true">
-            {index.writing}
-          </span>
-          <h2 class="section__title" id="writing-title">
-            {content.sections.writing}
-          </h2>
-          <span class="section__rule" aria-hidden="true" />
-        </div>
-        <p class="section__lead" data-reveal>
-          {content.blog.homeLead}
-        </p>
+  <section class="section" id="writing" aria-labelledby="writing-title">
+    <div class="section__head" data-reveal>
+      <span class="section__index" aria-hidden="true">
+        {index.writing}
+      </span>
+      <h2 class="section__title" id="writing-title">
+        {content.sections.writing}
+      </h2>
+      <span class="section__rule" aria-hidden="true" />
+    </div>
+    <p class="section__lead" data-reveal>
+      {content.blog.homeLead}
+    </p>
 
+    {
+      recentPosts.length > 0 ? (
         <ol class="post-list post-list--compact">
           {recentPosts.map((post) => (
             <li class="post-item" data-reveal>
@@ -239,14 +239,18 @@ const index = Object.fromEntries(
             </li>
           ))}
         </ol>
+      ) : (
+        <div class="blog-empty blog-empty--compact" data-reveal>
+          <p>{content.blog.empty}</p>
+        </div>
+      )
+    }
 
-        <a class="section__more" href={blogPath} data-reveal>
-          <span>{content.blog.viewAll}</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-      </section>
-    )
-  }
+    <a class="section__more" href={blogPath} data-reveal>
+      <span>{content.blog.viewAll}</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
 
   {
     content.publications.items.length > 0 && (

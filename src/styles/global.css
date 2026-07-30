@@ -350,6 +350,26 @@ html:lang(zh-CN) .mono-label {
   border-left: 1px solid var(--line);
 }
 
+.masthead__blog-link {
+  display: none;
+  padding: 0.3rem 0.35rem;
+  border-radius: 4px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.masthead__blog-link:hover,
+.masthead__blog-link:focus-visible,
+.masthead__blog-link[aria-current="page"] {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 .theme-toggle {
   display: grid;
   width: 1.9rem;
@@ -1043,11 +1063,30 @@ html:lang(zh-CN) .page-head__lead {
   max-width: 28em;
 }
 
-.empty-note {
-  padding: 2rem 0 5rem;
+.blog-empty {
+  display: grid;
+  padding: 1.75rem 0 clamp(4rem, 9vw, 6rem);
   border-top: 1px solid var(--line);
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 1rem;
   color: var(--muted);
   font-size: 1rem;
+}
+
+.blog-empty::before {
+  width: 1.4rem;
+  height: 1px;
+  margin-top: 0.85rem;
+  content: "";
+  background: var(--accent);
+}
+
+.blog-empty p {
+  max-width: 48ch;
+}
+
+.blog-empty--compact {
+  padding: 1.35rem 0 0;
 }
 
 .post-list {
@@ -1574,6 +1613,10 @@ html:lang(zh-CN) .markdown blockquote {
     display: none;
   }
 
+  .masthead__blog-link {
+    display: inline-flex;
+  }
+
   .brand__name {
     font-size: 0.9rem;
   }
@@ -1671,6 +1714,21 @@ html:lang(zh-CN) .markdown blockquote {
 
   .site-footer__note {
     text-align: left;
+  }
+}
+
+@media (max-width: 22rem) {
+  .masthead__inner {
+    gap: 0.75rem;
+  }
+
+  .brand__name {
+    display: none;
+  }
+
+  .masthead__tools {
+    gap: 0.25rem;
+    padding-left: 0.55rem;
   }
 }
 

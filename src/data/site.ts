@@ -376,9 +376,9 @@ export const siteContent: Record<Locale, PageContent> = {
       theme: "切换配色主题",
     },
     profile: {
-      name: "Yichen Zhang",
+      name: "张奕宸",
       monogram: "YZ",
-      role: "研究生",
+      role: "研究生（博士预备阶段）",
       affiliation: "大阪大学",
       tagline: "用生成模型理解分子、基因组，并加速科学发现。",
       bio: [
